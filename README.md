@@ -1,11 +1,11 @@
  Page 1 : Accueil
-Présentation du thème
+Présentation du thème                                                   -- DONE --
 (Nom, auteur, type de thème, cible, etc.)
 
 Fonctionnalités du thème
-(Responsive, intégration WooCommerce, blocs personnalisés, etc.)
+(Responsive, intégration WooCommerce, blocs personnalisés, etc.)        -- Détaillé les feature en détail idées soit des cartesqui slides à voire --
 
-Technologies utilisées
+Technologies utilisées                                                  -- DONE --
 (HTML5, SCSS, PHP, JS, outils via NPM, etc.)
 
 🟨 Page 2 : Documentation
