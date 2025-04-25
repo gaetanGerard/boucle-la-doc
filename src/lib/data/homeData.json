@@ -1,0 +1,65 @@
+{
+  "themePresentation": {
+    "title": "Présentation du thème",
+    "image": "/img/online-shop.png",
+    "technologiesImage": "/img/technologies.png",
+    "meta": {
+      "name": "Boucle-la",
+      "author": "Gérard Gaétan",
+      "type": "Thème WordPress / WooCommerce",
+      "targetAudience": "Personnes souhaitant vendre des bijoux ou accessoires en ligne"
+    },
+    "description": {
+      "title": "Description",
+      "text": "Boucle-la est un thème WordPress moderne et épuré, entièrement compatible avec WooCommerce, conçu pour mettre en valeur des produits de type bijoux et accessoires. Pensé pour offrir une expérience utilisateur fluide et élégante, ce thème s’adapte parfaitement aux petites entreprises, artisans, créateurs et créatrices souhaitant disposer d’une vitrine professionnelle pour vendre leurs créations en ligne."
+    },
+    "mainFeatures": {
+      "title": "Fonctionnalités principales",
+      "items": [
+        "Intégration complète avec WooCommerce",
+        "Design responsive et mobile-first",
+        "Système de panier dynamique avec affichage latéral",
+        "Mises à jour du panier en AJAX (sans rechargement de la page)",
+        "Affichage des produits en grille ou en liste",
+        "Système de tri des produits par prix, popularité, etc.",
+        "Affichage des produits en vedette sur la page d'accueil",
+        "Intégration de la fonctionnalité de zoom sur les images des produits",
+        "Affichage des produits similaires",
+        "Système de gestion des coupons et réductions",
+        "Intégration de passerelles de paiement sécurisées",
+        "Système de gestion des stocks",
+        "Mise en avant des produits phares sur la page d’accueil",
+        "Support des cartes cadeaux"
+      ]
+    },
+    "technologies": {
+      "title": "Technologies utilisées",
+      "list": [
+        {
+          "label": "WordPress",
+          "url": "https://fr.wordpress.org/"
+        },
+        {
+          "label": "WooCommerce",
+          "url": "https://woocommerce.com/"
+        },
+        {
+          "label": "Sass",
+          "url": "https://sass-lang.com/"
+        },
+        {
+          "label": "JavaScript / AJAX",
+          "url": "https://www.javascript.com/"
+        },
+        {
+          "label": "PHP",
+          "url": "https://www.php.net/"
+        }
+      ]
+    },
+    "goal": {
+      "title": "Objectif",
+      "text": "Permettre à des créateurs de bijoux de vendre facilement et efficacement leurs produits en ligne via une interface professionnelle et intuitive."
+    }
+  }
+}

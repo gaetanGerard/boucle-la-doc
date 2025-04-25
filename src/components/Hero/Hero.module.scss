@@ -1,0 +1,69 @@
+@use "@/sass" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($dark_color, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+}
+
+.title {
+  font-family: $cursive_font;
+  font-size: $font_size_3xl;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_8xl;
+  }
+}
+
+.subtitle {
+  font-family: $cursive_font;
+  font-size: $font_size_xl;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_3xl;
+  }
+}
+
+.button {
+  background-color: $btn_color;
+  color: $light_color;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $btn_color_hover;
+  }
+}

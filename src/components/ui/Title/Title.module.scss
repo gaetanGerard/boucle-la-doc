@@ -1,0 +1,48 @@
+@use "@/sass" as *;
+
+.h1 {
+  font-size: $font_size_3xl;
+  font-weight: $font_weight_extra_bold;
+  margin-bottom: 1rem;
+}
+
+.h2 {
+  font-size: $font_size_2xl;
+  font-weight: $font_weight_bold;
+  margin-bottom: 0.75rem;
+}
+
+.h3 {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_semibold;
+  margin-bottom: 0.5rem;
+}
+
+.h4 {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+}
+
+.h5 {
+  font-size: $font_size_md;
+  font-weight: $font_weight_medium;
+}
+
+.h6 {
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  text-transform: $text_transform_uppercase;
+  letter-spacing: 1px;
+}
+
+.heading {
+  text-align: $text_align_center;
+  margin-bottom: 1rem;
+  color: $title_color;
+}
+
+.subheading {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_bold;
+  color: $subheading_color;
+}

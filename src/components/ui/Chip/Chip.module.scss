@@ -1,0 +1,15 @@
+@use "@/sass" as *;
+
+.techItem {
+  background: $chip_background_color;
+  padding: 0.6rem 1.2rem;
+  border-radius: $border_radius_full;
+  font-size: $font_size_sm * 0.95; // ! **IF CHANGE HAPPEN ITS COULD HAVE UNDESIRED EFFECT ON THE UI** !
+  font-weight: $font_weight_semibold;
+  color: $title_color;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $chip_bg_color_hover;
+  }
+}

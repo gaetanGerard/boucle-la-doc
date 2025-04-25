@@ -1,0 +1,67 @@
+@use "@/sass" as *;
+
+.presentation {
+  padding: 4rem 2rem;
+  background-color: $white;
+  color: $dark_color;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  max-width: $max-section-width;
+  margin: 0 auto;
+}
+
+.block {
+  @include block;
+}
+
+.textContent {
+  @include text-content-block;
+}
+
+.meta {
+  font-size: $font_size_md;
+  line-height: $line_height_xl;
+  font-weight: $font_weight_medium;
+
+  p {
+    margin: 0.3rem 0;
+    color: $title_color;
+  }
+}
+
+.description,
+.technologies,
+.goal {
+  font-size: $font_size_md;
+  line-height: $line_height_xxl;
+  font-weight: $font_weight_regular;
+  color: $description_color;
+}
+
+.imageWrapper {
+  text-align: center;
+
+  .image {
+    @include image();
+  }
+}
+
+.features {
+  text-align: center;
+}
+
+.featureList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}

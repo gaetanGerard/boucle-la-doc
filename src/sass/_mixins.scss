@@ -42,3 +42,48 @@
   color: $color;
   text-decoration: underline;
 }
+
+// Mixin for a block like you can see in the Home page Presentation section
+@mixin block(
+  $column-desktop: 1fr 1fr,
+  $column-mobile: 1fr,
+  $gap: 4rem,
+  $align-items: center
+) {
+  display: grid;
+  grid-template-columns: $column-desktop;
+  gap: $gap;
+  align-items: $align-items;
+
+  @media (max-width: 900px) {
+    grid-template-columns: $column-mobile;
+  }
+}
+
+@mixin text-content-block($bg-color: $light_gray) {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: $bg-color;
+  padding: 2rem 2.5rem;
+  border-radius: $border_radius_xl;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+@mixin image(
+  $width: 100%,
+  $height: auto,
+  $object-fit: cover,
+  $border-radius: 0,
+  $display: block,
+  $box-shadow: none,
+  $scale: scale(1.01)
+) {
+  width: $width;
+  height: $height;
+  object-fit: $object-fit;
+  display: $display;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transform: $scale;
+}
