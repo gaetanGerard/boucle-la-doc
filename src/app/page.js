@@ -1,12 +1,3 @@
-import Header from '@/components/Header/Header';
+import Page from './[...slug]/page'
 
-export default function Home() {
-  return (
-    <div>
-      <Header />
-      <main >
-      <h1>Home</h1>
-      </main>
-    </div>
-  );
-}
+export default Page
