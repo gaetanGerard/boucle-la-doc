@@ -1,0 +1,12 @@
+export const getTodayDate = () => {
+  const today = new Date();
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0"); // Mois commence à 0
+  const year = today.getFullYear();
+
+  return `${day}/${month}/${year}`;
+};
+
+export const getCurrentYear = () => {
+  return new Date().getFullYear();
+};
