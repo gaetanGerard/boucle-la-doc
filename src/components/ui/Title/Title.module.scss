@@ -1,21 +1,33 @@
 @use "@/sass" as *;
 
 .h1 {
-  font-size: $font_size_3xl;
+  font-size: $font_size_2xl;
   font-weight: $font_weight_extra_bold;
   margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_3xl;
+  }
 }
 
 .h2 {
-  font-size: $font_size_2xl;
+  font-size: $font_size_xl;
   font-weight: $font_weight_bold;
   margin-bottom: 0.75rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_2xl;
+  }
 }
 
 .h3 {
-  font-size: $font_size_xl;
+  font-size: $font_size_lg;
   font-weight: $font_weight_semibold;
   margin-bottom: 0.5rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_xl;
+  }
 }
 
 .h4 {

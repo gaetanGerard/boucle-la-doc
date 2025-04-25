@@ -65,9 +65,13 @@
   flex-direction: column;
   gap: 2.5rem;
   background-color: $bg-color;
-  padding: 2rem 2.5rem;
+  padding: 1rem 0.5rem;
   border-radius: $border_radius_xl;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: 768px) {
+    padding: 2rem 2.5rem;
+  }
 }
 
 @mixin image(

@@ -1,7 +1,7 @@
 @use "@/sass" as *;
 
 .presentation {
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   background-color: $white;
   color: $dark_color;
   display: flex;
@@ -9,6 +9,10 @@
   gap: 6rem;
   max-width: $max-section-width;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 4rem 2rem;
+  }
 }
 
 .block {
@@ -64,4 +68,9 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
