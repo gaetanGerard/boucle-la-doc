@@ -1,0 +1,30 @@
+@use "sass:color";
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+$main_font: "Poppins";
+$cursive_font: "Corinthia";
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+// Main colors
+
+$dark_color: #151515;
+$light_color: #f5f5f5;
+$primary_color: #ee0e5b;
+$secondary_color: #d9b36c;
+$tertiary_color: #7e869e;
+
+$btn_color: $primary_color;
+$btn_color_hover: color.adjust($primary_color, $lightness: 10%);
+$btn_color_active: color.adjust($primary_color, $blackness: 10%);
+$btn_color_disabled: $tertiary_color;
+$btn_color_disabled_hover: color.adjust($tertiary_color, $lightness: 10%);

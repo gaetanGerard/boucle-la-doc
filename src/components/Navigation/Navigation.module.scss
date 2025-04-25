@@ -1,0 +1,28 @@
+@use "@/sass" as *;
+
+.navigation {
+  padding: 0.5rem 1rem;
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    color: $light_color;
+    transition: color 0.3s ease-in-out;
+
+    li {
+      @include link(
+        $font-family: $main_font,
+        $color: inherit,
+        $hover_color: $secondary_color,
+        $font-size: 1.2rem,
+        $font-weight: 600,
+        $text-transform: uppercase,
+        $letter-spacing: 0.1rem
+      );
+    }
+  }
+}
+
+.active {
+  @include link-active();
+}

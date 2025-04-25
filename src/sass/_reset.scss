@@ -1,0 +1,105 @@
+/* reset.scss */
+
+/* Box-sizing border-box pour tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Enlève les marges et les paddings par défaut */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlève les bordures de type outline sur tous les éléments focus */
+:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Supprime les styles par défaut des liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Enlève les styles par défaut des images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Assure une hauteur minimale pour html et body */
+html,
+body {
+  height: 100%;
+}
+
+/* Définir un fond de page neutre pour commencer */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Listes sans puces et sans indentation */
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Tableaux sans bordure par défaut */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Assure qu'il n'y a pas de marge entre les éléments de formulaire */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Redefinition du style des champs de formulaire */
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: transparent;
+}
+
+/* Rétablir le style pour les boutons */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/* Enlève les espacements par défaut sur les éléments de type block */
+hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Éviter que les éléments inline-block causent des marges */
+inline-block {
+  margin: 0;
+}
+
+/* Reset pour les éléments de formulaire */
+select,
+textarea {
+  appearance: none;
+}

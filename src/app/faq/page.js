@@ -1,11 +1,11 @@
 import Header from '@/components/Header/Header';
 
-export default function Home() {
+export default function Faq() {
   return (
     <div>
       <Header />
       <main >
-      <h1>Home</h1>
+      <h1>FAQ</h1>
       </main>
     </div>
   );

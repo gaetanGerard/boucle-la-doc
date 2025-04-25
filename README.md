@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ Page 1 : Accueil
+Présentation du thème
+(Nom, auteur, type de thème, cible, etc.)
 
-## Getting Started
+Fonctionnalités du thème
+(Responsive, intégration WooCommerce, blocs personnalisés, etc.)
 
-First, run the development server:
+Technologies utilisées
+(HTML5, SCSS, PHP, JS, outils via NPM, etc.)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🟨 Page 2 : Documentation
+Prérequis
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Plugins nécessaires / recommandés (avec lien + rôle)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Versions minimales PHP / WordPress
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Installation & configuration
 
-## Learn More
+Upload / activation du thème
 
-To learn more about Next.js, take a look at the following resources:
+Configuration des menus, pages, widgets, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Paramétrages optionnels
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Guide développeur / technique
 
-## Deploy on Vercel
+Structure des fichiers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Compilation SCSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ajout de blocs, templates
+
+Hooks ou filtres personnalisés
+
+Maintenance
+
+Roadmap : évolutions prévues, idées à venir
+
+Changelog : liste des modifications par version
+
+🟩 Page 3 : FAQ
+Réponses aux questions courantes :
+
+Le thème est-il compatible multilingue ?
+
+Peut-on utiliser un thème enfant ?
+
+Compatible avec quel constructeur de page ?
+
+Comment personnaliser sans casser les updates ?
+
+(Optionnel) Support / Contact
+
+(Optionnel) Liens utiles (WooCommerce, ACF, Gutenberg, etc.)
