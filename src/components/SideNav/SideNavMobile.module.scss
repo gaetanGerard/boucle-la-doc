@@ -1,0 +1,36 @@
+@use '@/sass' as *;
+
+.sideNavWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $white_gradient;
+
+  &.open {
+    width: 250px;
+    box-shadow: 6px 0 6px -3px rgba($dark_color, 0.1);
+
+    .toggleButton {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:not(.open) {
+    width: 42px;
+    box-shadow: 6px 0 6px -3px rgba($dark_color, 0.1);
+  }
+}
+
+.toggleButton {
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: $white;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: $dark_color;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "prerequisites": {
+    "title": "Prérequis",
+    "link": {
+      "label": "Prérequis",
+      "slug": "prerequisites"
+    },
+    "sections": [
+      {
+        "title": "Prérequis",
+        "slug": "prerequisites-requirements",
+        "description": "Pour développer et exécuter ce thème WordPress, assurez-vous de disposer des éléments suivants :",
+        "items": [
+          "Un environnement de développement local (MAMP, WAMP, Local by Flywheel)",
+          "Installation de WordPress (version 6.8 ou supérieure)",
+          "Connaissances de base en HTML, CSS, PHP et Sass",
+          "Éditeur de code (ex : Visual Studio Code)",
+          "Navigateur moderne (Chrome, Firefox, etc.)"
+        ]
+      },
+      {
+        "title": "Compatibilité",
+        "slug": "prerequisites-compatibility",
+        "description": "Ce thème est compatible avec les versions minimales suivantes :",
+        "items": [
+          "WordPress : 6.8",
+          "PHP : 7.4 ou supérieur",
+          "MySQL : 5.7 ou supérieur",
+          "Sass : 1.32 ou supérieur"
+        ]
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-@use "@/sass" as *;
+@use '@/sass' as *;
 
 .navigation {
   padding: 0.5rem 1rem;
@@ -25,4 +25,11 @@
 
 .active {
   @include link-active();
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
 }

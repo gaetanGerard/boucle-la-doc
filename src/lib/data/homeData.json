@@ -132,7 +132,7 @@
           "description": "Développement d'un panier WooCommerce totalement asynchrone. Mise à jour du panier sans rechargement de page, pour une expérience fluide et moderne.",
           "image": "/img/dynamic-dev.png",
           "button": {
-            "link": "/docs/panier-dynamique",
+            "link": "/documentation/panier-dynamique",
             "label": "Voir la documentation",
             "disabled": false
           }

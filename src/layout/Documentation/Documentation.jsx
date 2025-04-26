@@ -1,9 +1,24 @@
-import React from 'react'
+"use client";
 
-const Documentation = () => {
+import React, { useEffect, useState } from "react";
+import styles from "./Documentation.module.scss";
+import doc from "@/lib/data/doc.json";
+import { buildNavTree } from "@/lib/utils/buildNavTree";
+import RenderSideNav from "@/components/SideNav/RenderSideNav";
+
+const Documentation = ({ slug }) => {
+  const [sideNav, setSideNav] = useState([]);
+
+  useEffect(() => {
+    const navLinks = buildNavTree(doc);
+    setSideNav(navLinks);
+  }, []);
+
   return (
-    <main>Documentation</main>
-  )
-}
+    <main className={styles.container}>
+      <RenderSideNav nav={sideNav} />
+    </main>
+  );
+};
 
-export default Documentation
+export default Documentation;

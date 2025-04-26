@@ -1,0 +1,86 @@
+@use '@/sass' as *;
+
+.sideNav {
+  width: 250px;
+  background-color: $white_gradient;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 4px rgba($dark_color, 0.3);
+}
+
+.sideNavMobile {
+  width: 250px;
+  background-color: $white_gradient;
+  padding: 10px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.full_Height {
+  height: 100%;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 8px;
+}
+
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleButton,
+.subToggleButton {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  font-weight: $font_weight_semibold;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLink {
+  text-decoration: none;
+  color: $title_color;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.active {
+  color: $primary_color;
+  font-weight: $font_weight_bold;
+  text-decoration: underline;
+}
+
+.navLink:hover {
+  color: $primary_color;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.noTransition {
+  transition: none !important;
+}
+
+.subNavList {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}

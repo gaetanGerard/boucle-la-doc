@@ -3,7 +3,7 @@ Présentation du thème                                                   -- DON
 (Nom, auteur, type de thème, cible, etc.)
 
 Fonctionnalités du thème
-(Responsive, intégration WooCommerce, blocs personnalisés, etc.)        -- Détaillé les feature en détail idées soit des cartesqui slides à voire --
+(Responsive, intégration WooCommerce, blocs personnalisés, etc.)        -- DONE --
 
 Technologies utilisées                                                  -- DONE --
 (HTML5, SCSS, PHP, JS, outils via NPM, etc.)

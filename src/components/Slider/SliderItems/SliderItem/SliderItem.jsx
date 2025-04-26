@@ -14,7 +14,6 @@ const SliderItem = ({ item, id }) => {
                         <a
                             href={item.button.link}
                             className="primary"
-                            target="_blank"
                             rel="noopener noreferrer"
                         >
                             {item.button.label}

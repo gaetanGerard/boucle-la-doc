@@ -1,4 +1,4 @@
-@use "@/sass" as *;
+@use '@/sass' as *;
 
 .navigationMobile {
   position: fixed;
@@ -70,5 +70,12 @@
 @media (min-width: 768px) {
   .navigationMobile {
     display: none;
+  }
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
   }
 }
