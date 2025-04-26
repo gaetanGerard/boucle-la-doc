@@ -37,10 +37,7 @@
 .description,
 .technologies,
 .goal {
-  font-size: $font_size_md;
-  line-height: $line_height_xxl;
-  font-weight: $font_weight_regular;
-  color: $description_color;
+  @include home_text;
 }
 
 .imageWrapper {

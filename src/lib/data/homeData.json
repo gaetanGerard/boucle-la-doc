@@ -79,37 +79,37 @@
         {
           "name": "Newsletter",
           "description": "Gérez facilement vos abonnés et envoyez des newsletters professionnelles directement depuis votre site.",
-          "logo": "/img/plugins/newsletter.png",
+          "logo": "/img/plugins/newsletter-plugin.png",
           "link": "https://fr.wordpress.org/plugins/newsletter/"
         },
         {
           "name": "Forminator",
           "description": "Créez des formulaires de contact, sondages ou quiz en quelques clics, sans aucune compétence technique.",
-          "logo": "/img/plugins/forminator.png",
+          "logo": "/img/plugins/forminator-plugin.png",
           "link": "https://fr.wordpress.org/plugins/forminator/"
         },
         {
           "name": "Loco Translate",
           "description": "Traduisez l'ensemble de votre site facilement et adaptez-le à votre public cible, sans toucher au code.",
-          "logo": "/img/plugins/loco-translate.png",
+          "logo": "/img/plugins/loco-translate-plugin.png",
           "link": "https://fr.wordpress.org/plugins/loco-translate/"
         },
         {
           "name": "miniOrange Social Login and Sharing",
           "description": "Offrez à vos visiteurs la possibilité de se connecter via leurs réseaux sociaux préférés.",
-          "logo": "/img/plugins/miniorange-social-login.png",
+          "logo": "/img/plugins/miniorange-social-login-plugin.png",
           "link": "https://fr.wordpress.org/plugins/miniorange-login-openid/"
         },
         {
           "name": "Font Awesome",
           "description": "Des milliers d'icônes élégantes pour enrichir votre design et améliorer l'ergonomie de votre site.",
-          "logo": "/img/plugins/font-awesome.png",
+          "logo": "/img/plugins/font-awesome-plugin.png",
           "link": "https://fontawesome.com/"
         },
         {
           "name": "WooCommerce + Stripe",
           "description": "WooCommerce intégré en profondeur avec un système de paiement sécurisé via Stripe, prêt à l'emploi.",
-          "logo": "/img/plugins/woocommerce.png",
+          "logo": "/img/plugins/woocommerce-plugin.png",
           "link": "https://woocommerce.com/"
         }
       ]

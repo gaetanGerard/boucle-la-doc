@@ -20,7 +20,7 @@ const Presentation = ({ presentationData }) => {
 
     return (
         <section className={styles.presentation}>
-            <Title level={2} className="heading">{title}</Title>
+            <Title level={2} className="section_title">{title}</Title>
 
             <div className={styles.block}>
                 <div className={styles.textContent}>

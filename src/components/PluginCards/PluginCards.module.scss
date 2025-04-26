@@ -1,0 +1,22 @@
+@use "@/sass" as *;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow-x: hidden;
+  min-height: 350px;
+  width: 100%;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}

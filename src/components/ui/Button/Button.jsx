@@ -19,7 +19,7 @@ const Button = ({ children, asChild = false, className = "", disabled = false })
 
     if (asChild) {
         return React.cloneElement(children, {
-            className: `${classes} ${children.props.className || ""}`,
+            className: `${classes} ${styles[children.props.className] || ""}`,
             'aria-disabled': disabled,
             onClick: disabled ? (e) => e.preventDefault() : children.props.onClick,
         });
