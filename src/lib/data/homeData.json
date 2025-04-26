@@ -119,11 +119,23 @@
       "items": [
         {
           "name": "Produit Carte Cadeau",
-          "description": "Ajout d'un nouveau type de produit natif dans WooCommerce pour vendre des cartes cadeaux. Génération de codes uniques, définition d'une date de validité, gestion de l'expiration automatique, et tout cela sans surcoût."
+          "description": "Ajout d'un nouveau type de produit natif dans WooCommerce pour vendre des cartes cadeaux. Génération de codes uniques, définition d'une date de validité, gestion de l'expiration automatique, et tout cela sans surcoût.",
+          "image": "/img/gift-card.png",
+          "button": {
+            "link": "/documentation/produit-carte-cadeau",
+            "label": "Voir la documentation",
+            "disabled": false
+          }
         },
         {
           "name": "Panier dynamique",
-          "description": "Développement d'un panier WooCommerce totalement asynchrone. Mise à jour du panier sans rechargement de page, pour une expérience fluide et moderne."
+          "description": "Développement d'un panier WooCommerce totalement asynchrone. Mise à jour du panier sans rechargement de page, pour une expérience fluide et moderne.",
+          "image": "/img/dynamic-dev.png",
+          "button": {
+            "link": "/docs/panier-dynamique",
+            "label": "Voir la documentation",
+            "disabled": false
+          }
         }
       ]
     },

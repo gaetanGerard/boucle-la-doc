@@ -1,0 +1,77 @@
+@use "@/sass" as *;
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  display: none;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: $font_size_2xl;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: background 0.2s;
+  &:hover {
+    color: $primary_color;
+  }
+  &.left {
+    left: 0.5rem;
+  }
+  &.right {
+    right: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.slider_wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  &.active {
+    background: $primary_color;
+  }
+}

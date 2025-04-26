@@ -1,0 +1,23 @@
+@use "@/sass" as *;
+
+.wrapper {
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: $max-section-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.background_red {
+  background-color: red;
+  padding: 2rem 0;
+}
+
+.background_black {
+  background-color: $dark_color;
+  padding: 2rem 0;
+}
