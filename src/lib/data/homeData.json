@@ -141,38 +141,46 @@
     },
     "prebuiltBlocks": {
       "title": "Blocs de composition prêts à l'emploi",
-      "list": [
+      "items": [
         {
-          "title": "Section produits en vedette",
-          "description": "Mettez en avant vos meilleurs produits avec une mise en page dynamique et responsive.",
-          "image": "/img/blocks/featured-products.png",
-          "docLink": "/documentation/featured-products"
+          "name": "Composition Hero",
+          "description": "Mettez en avant votre marque avec une mise en page moderne et responsive.",
+          "image": "/img/composition/hero.png",
+          "button": {
+            "link": "/documentation/hero",
+            "label": "Voir la documentation",
+            "disabled": false
+          }
         },
         {
-          "title": "Section témoignages",
-          "description": "Ajoutez facilement des témoignages clients pour renforcer la crédibilité de votre boutique.",
-          "image": "/img/blocks/testimonials.png",
-          "docLink": "/documentation/testimonials"
+          "name": "Section à propos",
+          "description": "Besoin de raconter votre histoire ? utiliser cet composition et alterner votre contenu facilement.",
+          "image": "/img/composition/about.png",
+          "button": {
+            "link": "/documentation/about",
+            "label": "Voir la documentation",
+            "disabled": false
+          }
         },
         {
-          "title": "Section appel à l'action",
-          "description": "Incitez vos visiteurs à l'achat avec des call-to-actions parfaitement intégrés au design.",
-          "image": "/img/blocks/call-to-action.png",
-          "docLink": "/documentation/call-to-action"
+          "name": "Composition Login template",
+          "description": "Plus de soucis pour designer votre page de login placer la composition dans votre page, changer l'image et voilà.",
+          "image": "/img/composition/login.png",
+          "button": {
+            "link": "/documentation/login",
+            "label": "Voir la documentation",
+            "disabled": false
+          }
         }
       ]
-    },
-    "customizerOptions": {
-      "title": "Personnalisation facile via le customizer",
-      "description": "Boucle-la vous permet de personnaliser rapidement les couleurs principales, l'identité visuelle (logos, favicon, typographies), la mise en page des pages WooCommerce et bien plus, directement depuis l'interface WordPress.",
-      "image": "/img/customizer.png"
     },
     "continuousDevelopment": {
       "title": "Évolutivité continue",
       "description": "Boucle-la est en constante évolution. De nouvelles fonctionnalités sont régulièrement ajoutées pour répondre aux besoins des utilisateurs et aux dernières tendances du e-commerce.",
+      "image": "/img/innovation.png",
       "button": {
         "label": "Voir la roadmap",
-        "url": "/roadmap"
+        "url": "/documentation/roadmap"
       }
     }
   }

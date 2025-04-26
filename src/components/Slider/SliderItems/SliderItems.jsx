@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 
-import styles from "./CustomDevItems.module.scss";
-import CustomDevItem from "./CustomDevItem/CustomDevItem";
+import styles from "./SliderItems.module.scss";
+import SliderItem from "./SliderItem/SliderItem";
 
-const CustomDevItems = ({ items }) => {
+const SliderItems = ({ items }) => {
     const sliderRef = useRef(null);
     const [active, setActive] = useState(0);
 
@@ -54,7 +54,7 @@ const CustomDevItems = ({ items }) => {
                     onScroll={handleScroll}
                 >
                     {items.map((item, index) => (
-                        <CustomDevItem item={item} key={index} id={index} />
+                        <SliderItem item={item} key={index} id={index} />
                     ))}
                 </div>
                 <div className={styles.dots}>
@@ -80,4 +80,4 @@ const CustomDevItems = ({ items }) => {
         </div>
     );
 };
-export default CustomDevItems;
+export default SliderItems;

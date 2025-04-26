@@ -1,0 +1,46 @@
+@use "@/sass" as *;
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+
+  .title {
+    font-size: $font_size_xl;
+    line-height: $line_height_xxl;
+    font-weight: $font_weight_bold;
+    color: $title_color;
+  }
+
+  .description {
+    font-size: $font_size_md;
+    line-height: $line_height_xxl;
+    color: $description_color;
+  }
+
+  .cta {
+    margin-top: 2rem;
+    width: fit-content;
+    @include cta;
+  }
+}
+
+.imageWrapper {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+
+  .image {
+    @include image_with_mask;
+  }
+}

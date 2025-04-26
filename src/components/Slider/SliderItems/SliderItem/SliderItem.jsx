@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button/Button";
 import Title from "@/components/ui/Title/Title";
-import styles from "./CustomDevItem.module.scss";
+import styles from "./SliderItem.module.scss";
 
-const CustomDevItem = ({ item, id }) => {
+const SliderItem = ({ item, id }) => {
     return (
         <div className={styles.content} id={`slide-${id}`}>
             <div className={styles.text}>
@@ -35,4 +35,4 @@ const CustomDevItem = ({ item, id }) => {
     );
 };
 
-export default CustomDevItem;
+export default SliderItem;

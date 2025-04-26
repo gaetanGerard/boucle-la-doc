@@ -1,14 +1,14 @@
-import CustomDevItems from "./CustomDevItems/CustomDevItems";
+import SliderItems from "./SliderItems/SliderItems";
 import Title from "@/components/ui/Title/Title";
 import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
 
-const CustomDevs = ({ data }) => {
+const Slider = ({ data }) => {
     return (
         <SectionWrapper>
             <Title level={2} className="section_title">{data.title}</Title>
-            <CustomDevItems items={data.items} />
+            <SliderItems items={data.items} />
         </SectionWrapper>
     );
 };
 
-export default CustomDevs;
+export default Slider;
