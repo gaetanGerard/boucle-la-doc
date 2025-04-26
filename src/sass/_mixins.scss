@@ -43,6 +43,27 @@
   text-decoration: underline;
 }
 
+@mixin button() {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $btn_color;
+  color: $light_color;
+  padding: 0.75rem 1.5rem;
+  font-size: $font_size_sm;
+  font-weight: $font-weight_bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    background-color: $btn_color_hover;
+    transform: translateY(-2px);
+  }
+}
+
 // Mixin for a block like you can see in the Home page Presentation section
 @mixin block(
   $column-desktop: 1fr 1fr,

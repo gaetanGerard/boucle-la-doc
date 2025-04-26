@@ -58,3 +58,24 @@
   font-weight: $font_weight_bold;
   color: $subheading_color;
 }
+
+.hero_title {
+  font-family: $cursive_font;
+  font-size: $font_size_3xl;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_8xl;
+  }
+}
+
+.hero_subtitle {
+  font-family: $cursive_font;
+  font-size: $font_size_xl;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: $font_size_3xl;
+  }
+}

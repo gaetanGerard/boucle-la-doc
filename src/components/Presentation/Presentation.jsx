@@ -20,7 +20,7 @@ const Presentation = ({ presentationData }) => {
 
     return (
         <section className={styles.presentation}>
-            <Title level={2} className={"heading"}>{title}</Title>
+            <Title level={2} className="heading">{title}</Title>
 
             <div className={styles.block}>
                 <div className={styles.textContent}>
@@ -32,7 +32,7 @@ const Presentation = ({ presentationData }) => {
                     </div>
 
                     <div className={styles.description}>
-                        <Title level={3} className={"subheading"}>{description.title}</Title>
+                        <Title level={3} className="subheading">{description.title}</Title>
                         <p>{description.text}</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Presentation = ({ presentationData }) => {
             </div>
 
             <div className={styles.features}>
-                <Title level={3} className={"subheading"}>{mainFeatures.title}</Title>
+                <Title level={3} className="subheading">{mainFeatures.title}</Title>
                 <ul className={styles.featureList}>
                     {mainFeatures.items.map((item, idx) => (
                         <FeatureCard key={idx} featureCard={item} />
@@ -58,7 +58,7 @@ const Presentation = ({ presentationData }) => {
 
                 <div className={styles.textContent}>
                     <div className={styles.technologies}>
-                        <Title level={3} className={"subheading"}>{technologies.title}</Title>
+                        <Title level={3} className="subheading">{technologies.title}</Title>
                         <ul className={styles.techList}>
                             {technologies.list.map((tech, idx) => (
                                 <Chip key={idx} data={tech} />

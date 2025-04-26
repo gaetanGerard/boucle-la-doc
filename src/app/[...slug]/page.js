@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import React from 'react'
-import { usePathname } from 'next/navigation';
+import React from "react";
+import { usePathname } from "next/navigation";
 
-import Home from '@/layout/Home/Home'
-import Faq from '@/layout/Faq/Faq'
-import Documentation from '@/layout/Documentation/Documentation'
-
+import Home from "@/layout/Home/Home";
+import Faq from "@/layout/Faq/Faq";
+import Documentation from "@/layout/Documentation/Documentation";
+import PageNotFound from "@/layout/PageNotFound/PageNotFound";
 
 const page = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const pathname = usePathname();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const pathname = usePathname();
 
-    switch (pathname) {
-        case '/':
-            return <Home />
-        case '/faq':
-            return <Faq />
-        case '/documentation':
-            return <Documentation />
-        default:
-            return <div>404</div>;
-    }
-}
+  switch (pathname) {
+    case "/":
+      return <Home />;
+    case "/faq":
+      return <Faq />;
+    case "/documentation":
+      return <Documentation />;
+    default:
+      return <PageNotFound />;
+  }
+};
 
-export default page
+export default page;

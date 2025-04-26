@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero/Hero'
 import Presentation from '@/components/Presentation/Presentation'
-import ThemeFeature from '@/components/ThemeFeature/ThemeFeature'
+import ThemeFeatures from '@/components/ThemeFeatures/ThemeFeatures'
 
 import data from '@/lib/data/homeData.json'
 
@@ -15,7 +15,7 @@ const Home = () => {
                 link="/documentation"
             />
             <Presentation presentationData={data.themePresentation} />
-            <ThemeFeature themeFeatureData={data.themeFeature} />
+            <ThemeFeatures themeFeaturesData={data.themeFeatures} />
         </main>
     )
 }

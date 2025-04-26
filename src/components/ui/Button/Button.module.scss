@@ -1,0 +1,43 @@
+@use "@/sass" as *;
+
+.button {
+  @include button;
+}
+
+.primary {
+  background-color: $primary_color;
+  color: $light_color;
+
+  &:hover {
+    background-color: $btn_primary_color_hover;
+  }
+}
+
+.secondary {
+  background-color: $secondary_color;
+  color: $light_color;
+
+  &:hover {
+    background-color: $btn_secondary_color_hover;
+  }
+}
+
+.ghost {
+  background-color: $tertiary_color;
+  color: $light_color;
+
+  &:hover {
+    background-color: $btn_color_tertiary_hover;
+  }
+}
+
+.disabled {
+  background-color: $btn_color_disabled;
+  color: $light_color;
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &:hover {
+    background-color: $btn_color_disabled_hover;
+  }
+}

@@ -53,3 +53,13 @@ Comment personnaliser sans casser les updates ?
 (Optionnel) Support / Contact
 
 (Optionnel) Liens utiles (WooCommerce, ACF, Gutenberg, etc.)
+
+
+
+
+
+## Resource
+
+**Couleur pour images** #68BAC8
+
+**Site pour les illustrations** https://storyset.com/

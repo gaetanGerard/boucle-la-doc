@@ -103,9 +103,14 @@ $light_gray: #fafafa;
 
 $btn_color: $primary_color;
 $btn_color_hover: color.adjust($primary_color, $lightness: 10%);
-$btn_color_active: color.adjust($primary_color, $blackness: 10%);
-$btn_color_disabled: $tertiary_color;
-$btn_color_disabled_hover: color.adjust($tertiary_color, $lightness: 10%);
+$btn_primary_color_hover: color.adjust($primary_color, $lightness: 10%);
+$btn_primary_color_active: color.adjust($primary_color, $blackness: 10%);
+$btn_secondary_color_hover: color.adjust($secondary_color, $lightness: 10%);
+$btn_secondary_color_active: color.adjust($secondary_color, $blackness: 10%);
+$btn_color_tertiary_hover: color.adjust($tertiary_color, $lightness: 10%);
+$btn_color_tertiary_active: color.adjust($tertiary_color, $blackness: 10%);
+$btn_color_disabled: color.adjust($tertiary_color, $lightness: 30%);
+$btn_color_disabled_hover: color.adjust($btn_color_disabled, $blackness: 5%);
 
 /*--------------------------------------------------------------
 # Borders

@@ -61,5 +61,107 @@
       "title": "Objectif",
       "text": "Permettre à des créateurs de bijoux de vendre facilement et efficacement leurs produits en ligne via une interface professionnelle et intuitive."
     }
+  },
+  "themeFeatures": {
+    "title": "Fonctionnalités du thème",
+    "intro": {
+      "title": "Un thème moderne et entièrement responsive",
+      "description": "Boucle-la a été développé en utilisant des technologies modernes pour garantir une compatibilité parfaite sur mobile, tablette et ordinateur. Chaque élément a été pensé pour offrir une expérience utilisateur optimale, sans compromis.",
+      "image": "/img/responsive-design.png",
+      "button": {
+        "label": "Voir la démo",
+        "url": "/demo"
+      }
+    },
+    "plugins": {
+      "title": "Plugins intégrés et optimisés",
+      "list": [
+        {
+          "name": "Newsletter",
+          "description": "Gérez facilement vos abonnés et envoyez des newsletters professionnelles directement depuis votre site.",
+          "logo": "/img/plugins/newsletter.png",
+          "link": "https://fr.wordpress.org/plugins/newsletter/"
+        },
+        {
+          "name": "Forminator",
+          "description": "Créez des formulaires de contact, sondages ou quiz en quelques clics, sans aucune compétence technique.",
+          "logo": "/img/plugins/forminator.png",
+          "link": "https://fr.wordpress.org/plugins/forminator/"
+        },
+        {
+          "name": "Loco Translate",
+          "description": "Traduisez l'ensemble de votre site facilement et adaptez-le à votre public cible, sans toucher au code.",
+          "logo": "/img/plugins/loco-translate.png",
+          "link": "https://fr.wordpress.org/plugins/loco-translate/"
+        },
+        {
+          "name": "miniOrange Social Login and Sharing",
+          "description": "Offrez à vos visiteurs la possibilité de se connecter via leurs réseaux sociaux préférés.",
+          "logo": "/img/plugins/miniorange-social-login.png",
+          "link": "https://fr.wordpress.org/plugins/miniorange-login-openid/"
+        },
+        {
+          "name": "Font Awesome",
+          "description": "Des milliers d'icônes élégantes pour enrichir votre design et améliorer l'ergonomie de votre site.",
+          "logo": "/img/plugins/font-awesome.png",
+          "link": "https://fontawesome.com/"
+        },
+        {
+          "name": "WooCommerce + Stripe",
+          "description": "WooCommerce intégré en profondeur avec un système de paiement sécurisé via Stripe, prêt à l'emploi.",
+          "logo": "/img/plugins/woocommerce.png",
+          "link": "https://woocommerce.com/"
+        }
+      ]
+    },
+    "customDevelopments": {
+      "title": "Développements personnalisés",
+      "items": [
+        {
+          "name": "Produit Carte Cadeau",
+          "description": "Ajout d'un nouveau type de produit natif dans WooCommerce pour vendre des cartes cadeaux. Génération de codes uniques, définition d'une date de validité, gestion de l'expiration automatique, et tout cela sans surcoût."
+        },
+        {
+          "name": "Panier dynamique",
+          "description": "Développement d'un panier WooCommerce totalement asynchrone. Mise à jour du panier sans rechargement de page, pour une expérience fluide et moderne."
+        }
+      ]
+    },
+    "prebuiltBlocks": {
+      "title": "Blocs de composition prêts à l'emploi",
+      "list": [
+        {
+          "title": "Section produits en vedette",
+          "description": "Mettez en avant vos meilleurs produits avec une mise en page dynamique et responsive.",
+          "image": "/img/blocks/featured-products.png",
+          "docLink": "/documentation/featured-products"
+        },
+        {
+          "title": "Section témoignages",
+          "description": "Ajoutez facilement des témoignages clients pour renforcer la crédibilité de votre boutique.",
+          "image": "/img/blocks/testimonials.png",
+          "docLink": "/documentation/testimonials"
+        },
+        {
+          "title": "Section appel à l'action",
+          "description": "Incitez vos visiteurs à l'achat avec des call-to-actions parfaitement intégrés au design.",
+          "image": "/img/blocks/call-to-action.png",
+          "docLink": "/documentation/call-to-action"
+        }
+      ]
+    },
+    "customizerOptions": {
+      "title": "Personnalisation facile via le customizer",
+      "description": "Boucle-la vous permet de personnaliser rapidement les couleurs principales, l'identité visuelle (logos, favicon, typographies), la mise en page des pages WooCommerce et bien plus, directement depuis l'interface WordPress.",
+      "image": "/img/customizer.png"
+    },
+    "continuousDevelopment": {
+      "title": "Évolutivité continue",
+      "description": "Boucle-la est en constante évolution. De nouvelles fonctionnalités sont régulièrement ajoutées pour répondre aux besoins des utilisateurs et aux dernières tendances du e-commerce.",
+      "button": {
+        "label": "Voir la roadmap",
+        "url": "/roadmap"
+      }
+    }
   }
 }
