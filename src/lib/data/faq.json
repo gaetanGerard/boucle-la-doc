@@ -1,0 +1,35 @@
+{
+  "faq": {
+    "title": "FAQ - Questions fréquentes",
+    "link": {
+      "label": "FAQ",
+      "slug": "faq"
+    },
+    "questions": [
+      {
+        "title": "Le thème est-il compatible multilingue ?",
+        "subtitle": "Compatibilité multilingue",
+        "answer": "Oui, le thème est entièrement compatible avec les plugins multilingues populaires comme WPML et Polylang. Vous pouvez créer un site multilingue sans soucis grâce à cette compatibilité.",
+        "link": "https://example.com/compatibilite-multilingue"
+      },
+      {
+        "title": "Peut-on utiliser un thème enfant ?",
+        "subtitle": "Utilisation d'un thème enfant",
+        "answer": "Oui, l'utilisation d'un thème enfant est fortement recommandée pour personnaliser le thème sans risquer de perdre vos modifications lors des mises à jour. Vous pouvez créer un thème enfant et y ajouter vos propres styles et fonctions.",
+        "link": "https://example.com/theme-enfant"
+      },
+      {
+        "title": "Compatible avec quel constructeur de page ?",
+        "subtitle": "Compatibilité avec les constructeurs de page",
+        "answer": "Le thème est compatible avec les principaux constructeurs de pages, tels que Elementor, WPBakery, et Gutenberg. Vous pouvez utiliser ces outils pour personnaliser votre site de manière visuelle.",
+        "link": "https://example.com/constructeur-de-page"
+      },
+      {
+        "title": "Comment personnaliser sans casser les updates ?",
+        "subtitle": "Personnalisation sans risques",
+        "answer": "Pour personnaliser le thème sans risquer de casser les mises à jour, il est conseillé d'utiliser un thème enfant. Cela permet d'ajouter des styles ou des fonctionnalités personnalisées tout en conservant la possibilité de mettre à jour le thème principal sans perte de modifications.",
+        "link": "https://example.com/personalisation-sans-casser"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+@use '@/sass' as *;
+
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $primary_color;
+  color: $light_color;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba($dark_color, 0.3);
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+
+  &:hover {
+    background-color: $btn_primary_color_hover;
+    transform: translateY(-4px);
+  }
+}

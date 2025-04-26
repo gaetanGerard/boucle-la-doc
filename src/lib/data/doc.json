@@ -30,5 +30,536 @@
         ]
       }
     ]
+  },
+  "plugins": {
+    "title": "Plugins nécessaires et recommandés",
+    "link": {
+      "label": "Plugins",
+      "slug": "plugins"
+    },
+    "sections": [
+      {
+        "title": "Plugins nécessaires",
+        "slug": "plugins-required",
+        "plugins": [
+          {
+            "name": "WooCommerce",
+            "description": "WooCommerce est la solution e-commerce WordPress la plus populaire pour créer une boutique en ligne facilement.",
+            "logo": "https://woocommerce.com/wp-content/themes/woo/images/logos/woocommerce-logo.png",
+            "link": "https://woocommerce.com/",
+            "version": "8.0",
+            "advantages": [
+              "Large écosystème d'extensions",
+              "Flexibilité totale",
+              "Compatible avec le thème sans personnalisation supplémentaire"
+            ],
+            "alternative": null
+          },
+          {
+            "name": "Stripe for WooCommerce",
+            "description": "Permet d'intégrer rapidement le paiement par carte bancaire via Stripe dans votre boutique WooCommerce.",
+            "logo": "https://woocommerce.com/wp-content/uploads/2020/10/stripe-logo.png",
+            "link": "https://woocommerce.com/products/stripe/",
+            "version": "8.0",
+            "advantages": [
+              "Installation rapide",
+              "Pas de frais mensuels",
+              "Supporte Apple Pay et Google Pay"
+            ],
+            "alternative": {
+              "name": "Autres plugins Stripe",
+              "reason": "Il existe d'autres modules Stripe sur WordPress, mais la compatibilité des formulaires n'est pas garantie avec ce thème."
+            }
+          }
+        ]
+      },
+      {
+        "title": "Plugins recommandés",
+        "slug": "plugins-recommended",
+        "plugins": [
+          {
+            "name": "Loco Translate",
+            "description": "Facilite la traduction des thèmes et plugins WordPress directement depuis l'administration.",
+            "logo": "https://ps.w.org/loco-translate/assets/icon-256x256.png",
+            "link": "https://fr.wordpress.org/plugins/loco-translate/",
+            "version": "2.6.4",
+            "advantages": ["Traduction sans passer par FTP", "Interface simple et intuitive"],
+            "alternative": null
+          },
+          {
+            "name": "Newsletter",
+            "description": "Créez et gérez vos campagnes d'emailing directement depuis WordPress.",
+            "logo": "https://ps.w.org/newsletter/assets/icon-256x256.png",
+            "link": "https://fr.wordpress.org/plugins/newsletter/",
+            "version": "7.5.7",
+            "advantages": ["Création de newsletters simple", "Gestion d'abonnés intégrée"],
+            "alternative": null
+          },
+          {
+            "name": "Forminator",
+            "description": "Un constructeur de formulaires intuitif pour WordPress, avec des formulaires de contact, quiz et sondages.",
+            "logo": "https://ps.w.org/forminator/assets/icon-256x256.png",
+            "link": "https://fr.wordpress.org/plugins/forminator/",
+            "version": "1.24.1",
+            "advantages": [
+              "Interface visuelle conviviale",
+              "Formulaires, quiz et paiements Stripe/PayPal"
+            ],
+            "alternative": {
+              "name": "WPForms",
+              "reason": "WPForms est plus léger mais nécessite parfois des extensions payantes pour certaines fonctionnalités."
+            }
+          },
+          {
+            "name": "miniOrange Social Login and Sharing",
+            "description": "Ajoute la possibilité de se connecter avec Facebook, Google, Twitter et d'autres comptes sociaux.",
+            "logo": "https://ps.w.org/miniorange-login-openid/assets/icon-256x256.png",
+            "link": "https://fr.wordpress.org/plugins/miniorange-login-openid/",
+            "version": "7.6.0",
+            "advantages": [
+              "Connexion rapide pour les utilisateurs",
+              "Supporte plusieurs réseaux sociaux"
+            ],
+            "alternative": null
+          },
+          {
+            "name": "Font Awesome",
+            "description": "Ajoute facilement des icônes vectorielles FontAwesome dans votre thème WordPress.",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/Font_Awesome_5_logo.svg",
+            "link": "https://fr.wordpress.org/plugins/font-awesome/",
+            "version": "4.3.2",
+            "advantages": ["Bibliothèque d'icônes complète", "Icônes adaptatives et légères"],
+            "alternative": null
+          }
+        ]
+      }
+    ]
+  },
+  "installation": {
+    "title": "Installation et Configuration",
+    "link": {
+      "label": "Installation",
+      "slug": "installation"
+    },
+    "sections": [
+      {
+        "title": "Installer WordPress",
+        "slug": "installation-wordpress",
+        "description": "Avant de commencer l'installation du thème, vous devez avoir un site WordPress fonctionnel. Selon votre environnement de développement, vous avez plusieurs options :",
+        "methods": [
+          {
+            "title": "Installation sur un serveur local",
+            "description": "Utilisez des outils comme MAMP, WAMP ou Local by Flywheel pour installer WordPress en local.",
+            "documentationLink": "https://fr.wordpress.org/support/article/how-to-install-wordpress/"
+          },
+          {
+            "title": "Installation via conteneur (Docker)",
+            "description": "Utilisez Docker pour configurer un environnement WordPress complet, incluant la base de données et les dépendances.",
+            "documentationLink": "https://developer.wordpress.org/advanced-administration/docker/"
+          }
+        ]
+      },
+      {
+        "title": "Téléchargement et Upload du Thème",
+        "slug": "installation-upload-theme",
+        "description": "Après avoir configuré votre site WordPress, vous pouvez installer le thème.",
+        "steps": [
+          {
+            "title": "Téléchargement du thème",
+            "description": "Récupérez la dernière version du thème via le dépôt officiel.",
+            "repositoryLink": "https://github.com/ton-repo/theme-wordpress"
+          },
+          {
+            "title": "Upload du thème via l'interface WordPress",
+            "description": "Accédez à Apparence > Thèmes > Ajouter un nouveau > Téléverser un thème, puis sélectionnez l'archive ZIP du thème."
+          },
+          {
+            "title": "Upload manuel via FTP",
+            "description": "Décompressez le thème et transférez le dossier dans `wp-content/themes/` via votre client FTP (ex : FileZilla).",
+            "tips": [
+              {
+                "title": "Tip : Droits des dossiers",
+                "description": "Si vous rencontrez des erreurs, vérifiez que vos permissions de dossiers sont correctes (généralement 755 pour les dossiers et 644 pour les fichiers).",
+                "documentationLink": "https://wordpress.org/support/article/changing-file-permissions/"
+              }
+            ]
+          },
+          {
+            "title": "Compatibilité avec votre système d'exploitation",
+            "description": "L'installation est similaire sur Windows, macOS et Linux. Assurez-vous simplement que les chemins d'accès ne posent pas de problème lors du transfert FTP."
+          }
+        ],
+        "finalStep": {
+          "title": "Activation du thème",
+          "description": "Une fois installé, activez le thème via Apparence > Thèmes > Activer."
+        }
+      },
+      {
+        "title": "Configuration de Base du Thème",
+        "slug": "installation-theme-configuration",
+        "description": "Après activation du thème, suivez ces étapes pour une configuration optimale.",
+        "steps": [
+          {
+            "title": "Installer et configurer les plugins nécessaires",
+            "description": "Installez WooCommerce, Stripe et les plugins recommandés. Utilisez les assistants de configuration quand disponibles.",
+            "tips": [
+              {
+                "title": "Tip : Configuration rapide WooCommerce",
+                "description": "Utilisez l'assistant de configuration WooCommerce pour créer vos pages principales (boutique, panier, commande, mon compte).",
+                "documentationLink": "https://woocommerce.com/document/configuring-woocommerce-settings/"
+              }
+            ]
+          },
+          {
+            "title": "Configuration spécifique au thème",
+            "description": "Certains réglages sont propres au thème :\n- Choisir le modèle de page d'accueil\n- Configurer le header et le footer\n- Importer les paramètres de personnalisation s'ils sont fournis."
+          }
+        ]
+      },
+      {
+        "title": "Configuration des Menus, Pages et Widgets",
+        "slug": "installation-menus-pages-widgets",
+        "description": "Après l'activation du thème, suivez ces étapes de configuration :\n\n**Menus** :\n- Rendez-vous dans Apparence > Menus.\n- Créez votre menu principal et assignez-le à l'emplacement prévu par le thème (`header_menu` ou similaire).\n\n**Pages** :\n- Créez les pages de base : Accueil, Boutique, Panier, Commande, Mon Compte.\n- Associez la page d'accueil dans Réglages > Lecture > Afficher une page statique.\n- Pour WooCommerce, attribuez correctement les pages via WooCommerce > Réglages > Avancé.\n\n**Widgets** :\n- Rendez-vous dans Apparence > Widgets.\n- Ajoutez les widgets nécessaires dans les zones prévues : Sidebar, Footer, etc.\n\n**Tips** :\n- Le thème peut proposer des emplacements de widgets spécifiques, adaptés à WooCommerce.\n- Pensez à utiliser des extensions comme \"Widget Importer & Exporter\" pour sauvegarder votre configuration si besoin."
+      },
+      {
+        "title": "Configuration Initiale des Plugins",
+        "slug": "installation-plugin-configuration",
+        "description": "Après avoir installé les plugins recommandés :\n\n- **WooCommerce** : Suivez l'assistant d'installation, configurez les paiements, les livraisons et la boutique.\n- **Stripe** : Configurez les clés API pour activer les paiements par carte bancaire.\n- **Newsletter, Forminator, Social Login** : Reportez-vous à la documentation officielle de chaque plugin.\n\n**Tips** :\n- Respectez les versions minimum indiquées.\n- Testez les formulaires et processus d'achat pour valider le bon fonctionnement."
+      }
+    ]
+  },
+  "developerGuide": {
+    "title": "Guide Technique / Développeur",
+    "link": {
+      "label": "Guide Développeur",
+      "slug": "developer-guide"
+    },
+    "sections": [
+      {
+        "title": "Structure du Thème",
+        "slug": "developer-structure",
+        "description": "Le thème suit la structure standard WordPress avec quelques ajouts pour WooCommerce et des personnalisations spécifiques.",
+        "fileTree": [
+          {
+            "name": "theme-name/",
+            "children": [
+              {
+                "name": "assets/",
+                "children": [
+                  { "name": "css/" },
+                  { "name": "js/" },
+                  { "name": "images/" },
+                  { "name": "fonts/" }
+                ]
+              },
+              {
+                "name": "woocommerce/",
+                "children": [
+                  { "name": "cart/" },
+                  { "name": "checkout/" },
+                  { "name": "myaccount/" },
+                  { "name": "product/" }
+                ]
+              },
+              {
+                "name": "template-parts/",
+                "children": [
+                  { "name": "header.php" },
+                  { "name": "footer.php" },
+                  { "name": "sidebar.php" }
+                ]
+              },
+              { "name": "functions.php" },
+              { "name": "style.scss" },
+              { "name": "index.php" },
+              { "name": "screenshot.png" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Interactivité",
+        "slug": "developer-interactivity",
+        "description": "L'interactivité du thème est principalement gérée avec jQuery pour des opérations légères comme le menu mobile, les animations de formulaire, ou l'affichage dynamique de certains éléments. Un usage minimal de JavaScript vanilla est également présent pour améliorer la performance."
+      },
+      {
+        "title": "PHP et WordPress",
+        "slug": "developer-php",
+        "description": "Le thème utilise les bonnes pratiques de développement WordPress en PHP :\n- Utilisation de fonctions natives WordPress\n- Sécurisation des données (esc_html, esc_url, wp_nonce)\n- Respect de la hiérarchie des templates\n- Personnalisation WooCommerce via des templates override."
+      },
+      {
+        "title": "Styles et SCSS",
+        "slug": "developer-scss",
+        "description": "Le style est structuré à l'aide de SCSS pour faciliter la modularité et la maintenance du code. Un fichier principal `style.scss` importe tous les modules nécessaires (variables, mixins, bases, layouts, components)."
+      },
+      {
+        "title": "Hooks et Filtres Personnalisés",
+        "slug": "developer-hooks-filters",
+        "description": "Le thème propose quelques hooks et filtres personnalisés pour permettre une extensibilité facile. Voici des exemples génériques :",
+        "customHooks": [
+          {
+            "name": "theme_before_content",
+            "type": "Action",
+            "description": "Permet d'injecter du contenu avant l'affichage principal."
+          },
+          {
+            "name": "theme_after_content",
+            "type": "Action",
+            "description": "Permet d'injecter du contenu après l'affichage principal."
+          },
+          {
+            "name": "theme_filter_product_title",
+            "type": "Filter",
+            "description": "Permet de modifier dynamiquement les titres de produits WooCommerce."
+          }
+        ]
+      }
+    ]
+  },
+  "blocks_and_compositions": {
+    "title": "Blocs de Composition et Composants Exclusifs",
+    "link": {
+      "label": "Blocs & Composants",
+      "slug": "blocks-and-compositions"
+    },
+    "sections": [
+      {
+        "title": "Fonctionnalité unique",
+        "slug": "unique-features",
+        "description": "Cette section présente les fonctionnalités uniques du thème, qui ne sont pas disponibles dans d'autres thèmes WordPress et ont été développer uniquement pour se thème.",
+        "features": [
+          {
+            "title": "Carte Cadeau",
+            "slug": "gift-card",
+            "image": "/images/compositions/gift-card.png",
+            "description": "Le bloc Carte Cadeau permet aux utilisateurs de créer et d'offrir des cartes cadeaux pour leur boutique WooCommerce.",
+            "where_to_use": "Page d'accueil, page produit, ou lors de promotions spéciales.",
+            "why_use": "Cette composition permet de gérer facilement les cartes cadeaux sans avoir à recourir à des extensions tierces. Vous pouvez générer des codes uniques, définir une date de validité, et suivre les montants restants.",
+            "benefits": [
+              "Génère des codes cadeaux automatiquement",
+              "Prise en charge de la date de validité",
+              "Suivi du solde disponible",
+              "Entièrement gratuite et intégrée au thème"
+            ]
+          },
+          {
+            "title": "Panier Asynchrone",
+            "slug": "async-cart",
+            "image": "/images/compositions/async-cart.png",
+            "description": "Le panier asynchrone permet aux utilisateurs de mettre à jour leur panier sans recharger la page.",
+            "where_to_use": "Page produit, page panier, lors de l'ajout d'articles au panier.",
+            "why_use": "Améliore l'expérience utilisateur en permettant des mises à jour instantanées du panier sans perdre de temps avec des rechargements de page.",
+            "benefits": [
+              "Panier qui se met à jour en temps réel",
+              "Aucune interruption de l'expérience utilisateur",
+              "Compatible avec tous les types de produits WooCommerce"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités Utilisateur",
+        "slug": "user-features",
+        "description": "Cette section décrit les fonctionnalités spécifiques du thème liées à l'expérience utilisateur, y compris la gestion des comptes, le suivi des commandes, et plus encore.",
+        "features": [
+          {
+            "title": "Page de Compte Utilisateur",
+            "slug": "user-account-page",
+            "description": "La page de compte utilisateur permet à chaque client de gérer ses informations personnelles, ses commandes passées et ses préférences.",
+            "details": "Les utilisateurs peuvent se connecter pour consulter leur historique de commandes, gérer leurs informations de paiement et leurs adresses de livraison.",
+            "benefits": [
+              "Facilite la gestion des informations personnelles",
+              "Permet de suivre l'état des commandes en temps réel",
+              "Améliore l'interaction avec les clients"
+            ]
+          },
+          {
+            "title": "Suivi des Commandes",
+            "slug": "order-tracking",
+            "description": "Le suivi des commandes permet aux utilisateurs de suivre l'état de leurs commandes directement depuis leur compte.",
+            "details": "Chaque commande affiche un statut, des détails sur les produits achetés, ainsi qu'un lien vers les informations de livraison.",
+            "benefits": [
+              "Transparence totale pour le client",
+              "Réduit les demandes au support client",
+              "Facilite la gestion des retours"
+            ]
+          },
+          {
+            "title": "Gestion des Adresses de Livraison",
+            "slug": "shipping-addresses",
+            "description": "Les utilisateurs peuvent gérer plusieurs adresses de livraison et choisir celle qu'ils préfèrent pour chaque commande.",
+            "details": "Cette fonctionnalité simplifie le processus de commande pour les clients récurrents et leur permet de s'assurer que leurs produits sont envoyés à la bonne adresse.",
+            "benefits": [
+              "Plusieurs adresses enregistrées",
+              "Choix facile lors de la commande",
+              "Système flexible pour les clients"
+            ]
+          },
+          {
+            "title": "Historique des Commandes",
+            "slug": "order-history",
+            "description": "Les utilisateurs peuvent consulter l'historique de leurs commandes passées, y compris les détails des produits et les statuts.",
+            "details": "Cette fonctionnalité permet aux clients de garder une trace de leurs achats et de gérer facilement les retours ou échanges.",
+            "benefits": [
+              "Accès rapide à l'historique d'achat",
+              "Facilite la gestion des retours",
+              "Améliore la satisfaction client"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Blocs de Composition",
+        "slug": "composition-blocks",
+        "description": "Cette section présente les différents blocs de composition disponibles dans le thème. Ces blocs sont pré-construits pour faciliter la création de pages sans avoir à recourir à des solutions personnalisées.",
+        "blocks": [
+          {
+            "title": "Hero HighImpact",
+            "slug": "hero-highimpact",
+            "image": "/images/compositions/hero-highimpact.png",
+            "description": "Le bloc Hero HighImpact est une section visuellement percutante, idéale pour présenter les éléments clés de votre site.",
+            "why_use": "Ce bloc est conçu pour attirer l'attention avec des visuels grands et engageants. Il permet de mettre en valeur des informations importantes telles que des promotions ou des événements.",
+            "benefits": [
+              "Design optimisé pour l'impact visuel",
+              "Facile à personnaliser",
+              "Idéal pour les annonces de grande envergure"
+            ]
+          },
+          {
+            "title": "Hero LowImpact",
+            "slug": "hero-lowimpact",
+            "image": "/images/compositions/hero-lowimpact.png",
+            "description": "Le bloc Hero LowImpact offre un design plus subtil mais élégant, idéal pour les messages moins intrusifs.",
+            "why_use": "Utilisez ce bloc lorsque vous voulez que l'accent soit mis sur des informations importantes, sans être trop intrusif.",
+            "benefits": [
+              "Design plus discret",
+              "Adapté aux pages plus formelles",
+              "Facile à adapter au style de votre marque"
+            ]
+          },
+          {
+            "title": "About Section",
+            "slug": "about-section",
+            "image": "/images/compositions/about-section.png",
+            "description": "Le bloc About Section est conçu pour présenter des informations sur votre entreprise ou votre mission.",
+            "why_use": "Ce bloc est idéal pour fournir des informations claires et structurées sur ce que fait votre entreprise et ce qui la distingue.",
+            "benefits": [
+              "Section structurée pour un contenu cohérent",
+              "Personnalisation facile",
+              "Mise en valeur de l'identité de votre marque"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "maintenance": {
+    "title": "Maintenance et Roadmap",
+    "link": {
+      "label": "Maintenance & Roadmap",
+      "slug": "maintenance"
+    },
+    "sections": [
+      {
+        "title": "Roadmap",
+        "slug": "roadmap",
+        "description": "Cette section présente les ajouts et améliorations futures du thème, ainsi que les corrections de bugs prévues. Elle vous permet de suivre les évolutions du projet et de savoir à quoi vous attendre dans les prochaines versions.",
+        "roadmap_items": [
+          {
+            "title": "Intégration du Customizer WordPress",
+            "slug": "customizer-integration",
+            "description": "Ajout d'intégrations supplémentaires au customizer WordPress, permettant une personnalisation encore plus poussée des options du thème directement depuis l'interface WordPress.",
+            "expected_release": "Q3 2025"
+          },
+          {
+            "title": "Nouveaux types de produits WooCommerce",
+            "slug": "new-product-types",
+            "description": "Développement de nouveaux types de produits WooCommerce, comme les produits en précommande, les abonnements, et les produits virtuels avec des options avancées.",
+            "expected_release": "Q4 2025"
+          },
+          {
+            "title": "Amélioration de la gestion des coupons de réduction",
+            "slug": "coupon-management-improvements",
+            "description": "Amélioration du système de gestion des coupons dans WooCommerce, y compris la prise en charge de types de réduction supplémentaires et des règles conditionnelles avancées.",
+            "expected_release": "Q1 2026"
+          },
+          {
+            "title": "Optimisation des performances du panier asynchrone",
+            "slug": "async-cart-performance",
+            "description": "Optimisation des performances du panier asynchrone pour une expérience utilisateur encore plus fluide, en particulier lors de l'ajout d'articles dans des boutiques avec un grand nombre de produits.",
+            "expected_release": "Q2 2026"
+          },
+          {
+            "title": "Corrections de Bugs",
+            "slug": "bug-fixes",
+            "description": "Correctifs généraux pour résoudre les problèmes signalés par la communauté et améliorer la stabilité du thème.",
+            "expected_release": "Chaque mois"
+          }
+        ]
+      },
+      {
+        "title": "Changelog",
+        "link": {
+          "label": "Changelog",
+          "slug": "changelog"
+        },
+        "entries": [
+          {
+            "version": "1.0.0",
+            "release_date": "2025-04-01",
+            "changes": [
+              {
+                "type": "Ajout",
+                "description": "Lancement initial du thème avec la prise en charge de WooCommerce et plusieurs blocs de composition personnalisés."
+              },
+              {
+                "type": "Amélioration",
+                "description": "Amélioration de l'intégration du panier asynchrone pour des mises à jour en temps réel sans rechargement de page."
+              },
+              {
+                "type": "Correction de bug",
+                "description": "Correction d'un bug empêchant l'affichage correct du panier dans certaines configurations."
+              }
+            ]
+          },
+          {
+            "version": "1.1.0",
+            "release_date": "2025-05-10",
+            "changes": [
+              {
+                "type": "Ajout",
+                "description": "Ajout de la fonctionnalité de cartes cadeaux avec gestion des dates de validité et des montants restants."
+              },
+              {
+                "type": "Amélioration",
+                "description": "Amélioration de la page de compte utilisateur, permettant la gestion des informations personnelles et des adresses de livraison."
+              },
+              {
+                "type": "Correction de bug",
+                "description": "Correction d'un problème avec l'intégration du suivi des commandes dans certaines configurations de serveur."
+              }
+            ]
+          },
+          {
+            "version": "1.2.0",
+            "release_date": "2025-06-15",
+            "changes": [
+              {
+                "type": "Ajout",
+                "description": "Ajout de nouveaux types de produits WooCommerce, y compris les produits en précommande et les abonnements."
+              },
+              {
+                "type": "Amélioration",
+                "description": "Optimisation des performances de la page d'accueil et des blocs de composition pour des chargements plus rapides."
+              },
+              {
+                "type": "Correction de bug",
+                "description": "Correction de problèmes mineurs avec l'affichage des images dans les blocs de composition sur certaines résolutions d'écran."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

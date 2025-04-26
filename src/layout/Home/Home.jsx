@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero/Hero'
 import Presentation from '@/components/Presentation/Presentation'
 import ThemeFeatures from '@/components/ThemeFeatures/ThemeFeatures'
+import BackToTop from '@/components/ui/BackToTop/BackToTop'
 
 import data from '@/lib/data/homeData.json'
 
@@ -16,6 +17,7 @@ const Home = () => {
             />
             <Presentation presentationData={data.themePresentation} />
             <ThemeFeatures themeFeaturesData={data.themeFeatures} />
+            <BackToTop />
         </main>
     )
 }

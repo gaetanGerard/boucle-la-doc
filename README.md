@@ -9,53 +9,44 @@ Technologies utilisées                                                  -- DONE
 (HTML5, SCSS, PHP, JS, outils via NPM, etc.)
 
 🟨 Page 2 : Documentation
-Prérequis
+Prérequis                                                               -- DATA DONE --
 
-Plugins nécessaires / recommandés (avec lien + rôle)
+Plugins nécessaires / recommandés (avec lien + rôle)                    -- DATA DONE --
 
-Versions minimales PHP / WordPress
+Versions minimales PHP / WordPress                                      -- DATA DONE --
 
-Installation & configuration
+Installation & configuration                                            -- DATA DONE --
 
-Upload / activation du thème
+Upload / activation du thème                                            -- DATA DONE --
 
-Configuration des menus, pages, widgets, etc.
+Configuration des menus, pages, widgets, etc.                           -- DATA DONE --
 
-Paramétrages optionnels
+Guide développeur / technique                                           -- DATA DONE --
 
-Guide développeur / technique
+Structure des fichiers                                                  -- DATA DONE --
 
-Structure des fichiers
+Compilation SCSS                                                        -- DATA DONE --
 
-Compilation SCSS
+Ajout de blocs, templates                                               -- DATA DONE --
 
-Ajout de blocs, templates
+Hooks ou filtres personnalisés                                          -- DATA DONE --
 
-Hooks ou filtres personnalisés
+Maintenance                                                             -- DATA DONE --
 
-Maintenance
+Roadmap : évolutions prévues, idées à venir                             -- DATA DONE --
 
-Roadmap : évolutions prévues, idées à venir
+Changelog : liste des modifications par version                         -- DATA DONE --
 
-Changelog : liste des modifications par version
+🟩 Page 3 : FAQ                                                          -- DATA DONE --
+Réponses aux questions courantes :                                       -- DATA DONE --
 
-🟩 Page 3 : FAQ
-Réponses aux questions courantes :
+Le thème est-il compatible multilingue ?                                 -- DATA DONE --
 
-Le thème est-il compatible multilingue ?
+Peut-on utiliser un thème enfant ?                                       -- DATA DONE --
 
-Peut-on utiliser un thème enfant ?
+Compatible avec quel constructeur de page ?                              -- DATA DONE --
 
-Compatible avec quel constructeur de page ?
-
-Comment personnaliser sans casser les updates ?
-
-(Optionnel) Support / Contact
-
-(Optionnel) Liens utiles (WooCommerce, ACF, Gutenberg, etc.)
-
-
-
+Comment personnaliser sans casser les updates ?                          -- DATA DONE --
 
 
 ## Resource
