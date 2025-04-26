@@ -41,7 +41,7 @@ const CustomDevItems = ({ items }) => {
         <div className={styles.container}>
             <button
                 className={styles.arrow + " " + styles.left}
-                onClick={() => scrollTo(Math.max(active - 1, 0))}
+                onClick={() => scrollTo(active === 0 ? items.length - 1 : active - 1)}
                 aria-label="Précédent"
                 type="button"
             >
@@ -71,7 +71,7 @@ const CustomDevItems = ({ items }) => {
             </div>
             <button
                 className={styles.arrow + " " + styles.right}
-                onClick={() => scrollTo(Math.min(active + 1, items.length - 1))}
+                onClick={() => scrollTo(active === items.length - 1 ? 0 : active + 1)}
                 aria-label="Suivant"
                 type="button"
             >
