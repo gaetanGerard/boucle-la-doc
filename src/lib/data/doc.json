@@ -66,6 +66,14 @@
           "anchor": "plugins-required",
           "level": 2
         },
+        "image": {
+          "src": "/img/required-plugin.png",
+          "width": 500,
+          "height": 500,
+          "alt": "Plugins nécessaires pour le bon fonctionnement du thème.",
+          "className": "image_center"
+        },
+        "description": "Certains plugins sont indispensables pour assurer le bon fonctionnement et offrir toutes les fonctionnalités prévues par ce thème. Cette section présente les plugins essentiels que vous devez installer et configurer avant d'utiliser pleinement votre site. Ils garantissent une intégration optimale avec les différentes fonctionnalités du thème, notamment pour la gestion de la boutique en ligne et les moyens de paiement. Il est fortement recommandé d'utiliser les plugins indiqués pour éviter tout problème de compatibilité ou de performance.",
         "plugins": [
           {
             "title": {
@@ -74,14 +82,36 @@
               "level": 3
             },
             "description": "WooCommerce est la solution e-commerce WordPress la plus populaire pour créer une boutique en ligne facilement.",
-            "logo": "https://woocommerce.com/wp-content/themes/woo/images/logos/woocommerce-logo.png",
+            "logo": {
+              "src": "/img/plugins/woocommerce-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "WooCommerce",
+              "className": "image_center"
+            },
             "link": "https://woocommerce.com/",
-            "version": "8.0",
-            "advantages": [
-              "Large écosystème d'extensions",
-              "Flexibilité totale",
-              "Compatible avec le thème sans personnalisation supplémentaire"
-            ],
+            "version": {
+              "label": "8.0",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "WooCommerce est un plugin essentiel pour :",
+              "items": [
+                "Gérer les produits et les catégories",
+                "Configurer les options de paiement et de livraison",
+                "Suivre les commandes et les clients",
+                "Large écosystème d'extensions",
+                "Flexibilité totale",
+                "Compatible avec le thème sans personnalisation supplémentaire"
+              ]
+            },
+
             "alternative": null
           },
           {
@@ -91,17 +121,41 @@
               "level": 3
             },
             "description": "Permet d'intégrer rapidement le paiement par carte bancaire via Stripe dans votre boutique WooCommerce.",
-            "logo": "https://woocommerce.com/wp-content/uploads/2020/10/stripe-logo.png",
+            "logo": {
+              "src": "/img/plugins/stripe-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "Stripe for WooCommerce",
+              "className": "image_center"
+            },
             "link": "https://woocommerce.com/products/stripe/",
-            "version": "8.0",
-            "advantages": [
-              "Installation rapide",
-              "Pas de frais mensuels",
-              "Supporte Apple Pay et Google Pay"
-            ],
+            "version": {
+              "label": "8.0",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "Stripe for WooCommerce est essentiel pour :",
+              "items": [
+                "Accepter les paiements par carte bancaire",
+                "Gérer les remboursements et les litiges",
+                "Sécuriser les transactions avec Stripe",
+                "Intégration fluide avec WooCommerce",
+                "Configuration simple via l'interface WooCommerce",
+                "Installation rapide",
+                "Pas de frais mensuels",
+                "Supporte Apple Pay et Google Pay"
+              ]
+            },
             "alternative": {
-              "name": "Autres plugins Stripe",
-              "reason": "Il existe d'autres modules Stripe sur WordPress, mais la compatibilité des formulaires n'est pas garantie avec ce thème."
+              "title": "Woocommerce Payments",
+              "reason": "Solution intégré avec Woocommerce.",
+              "tested": { "label": "Non testé", "className": "warning", "isLink": false }
             }
           }
         ]
@@ -112,10 +166,18 @@
           "slug": "plugins-recommended"
         },
         "title": {
-          "name": "Plugins nécessaires et recommandés",
-          "id": "recommended-plugins",
+          "name": "Plugins recommandés",
+          "anchor": "recommended-plugins",
           "level": 2
         },
+        "image": {
+          "src": "/img/recommended-plugin.png",
+          "width": 500,
+          "height": 500,
+          "alt": "Plugins recommandé pour le bon fonctionnement du thème.",
+          "className": "image_center"
+        },
+        "description": "En complément des plugins nécessaires, certains outils peuvent améliorer l'expérience utilisateur, simplifier la gestion de votre site ou étendre ses fonctionnalités. Ces plugins ne sont pas obligatoires, mais leur installation est vivement conseillée pour profiter pleinement du potentiel du thème. Vous trouverez ici une sélection de solutions fiables et faciles à intégrer pour enrichir votre projet WordPress.",
         "plugins": [
           {
             "title": {
@@ -124,10 +186,34 @@
               "level": 3
             },
             "description": "Facilite la traduction des thèmes et plugins WordPress directement depuis l'administration.",
-            "logo": "https://ps.w.org/loco-translate/assets/icon-256x256.png",
+            "logo": {
+              "src": "/img/plugins/loco-translate-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "Loco Translate",
+              "className": "image_center"
+            },
             "link": "https://fr.wordpress.org/plugins/loco-translate/",
-            "version": "2.6.4",
-            "advantages": ["Traduction sans passer par FTP", "Interface simple et intuitive"],
+            "version": {
+              "label": "2.6.4",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "Loco Translate est utile pour :",
+              "items": [
+                "Traduire facilement les chaînes de texte",
+                "Gérer les fichiers de langue",
+                "Éditer les traductions directement dans l'interface",
+                "Supporte plusieurs formats de fichiers de langue",
+                "Traduction sans passer par FTP"
+              ]
+            },
             "alternative": null
           },
           {
@@ -137,10 +223,33 @@
               "level": 3
             },
             "description": "Créez et gérez vos campagnes d'emailing directement depuis WordPress.",
-            "logo": "https://ps.w.org/newsletter/assets/icon-256x256.png",
+            "logo": {
+              "src": "/img/plugins/newsletter-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "Newsletter",
+              "className": "image_center"
+            },
             "link": "https://fr.wordpress.org/plugins/newsletter/",
-            "version": "7.5.7",
-            "advantages": ["Création de newsletters simple", "Gestion d'abonnés intégrée"],
+            "version": {
+              "label": "7.5.7",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "Newsletter est utile pour :",
+              "items": [
+                "Gérer les abonnés et les listes de diffusion",
+                "Envoyer des newsletters et des campagnes d'emailing",
+                "Statistiques avancées sur les ouvertures et clics",
+                "Création de newsletters simple"
+              ]
+            },
             "alternative": null
           },
           {
@@ -150,16 +259,37 @@
               "level": 3
             },
             "description": "Un constructeur de formulaires intuitif pour WordPress, avec des formulaires de contact, quiz et sondages.",
-            "logo": "https://ps.w.org/forminator/assets/icon-256x256.png",
+            "logo": {
+              "src": "/img/plugins/forminator-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "Forminator",
+              "className": "image_center"
+            },
             "link": "https://fr.wordpress.org/plugins/forminator/",
-            "version": "1.24.1",
-            "advantages": [
-              "Interface visuelle conviviale",
-              "Formulaires, quiz et paiements Stripe/PayPal"
-            ],
+            "version": {
+              "label": "1.24.1",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "Forminator est utile pour :",
+              "items": [
+                "Créer des formulaires de contact, quiz et sondages",
+                "Intégration avec des services tiers (Mailchimp, Zapier)",
+                "Interface visuelle conviviale",
+                "Formulaires, quiz et paiements Stripe/PayPal"
+              ]
+            },
             "alternative": {
-              "name": "WPForms",
-              "reason": "WPForms est plus léger mais nécessite parfois des extensions payantes pour certaines fonctionnalités."
+              "title": "WPForms",
+              "reason": "WPForms est plus léger mais nécessite parfois des extensions payantes pour certaines fonctionnalités.",
+              "tested": { "label": "Non testé", "className": "warning", "isLink": false }
             }
           },
           {
@@ -169,13 +299,34 @@
               "level": 3
             },
             "description": "Ajoute la possibilité de se connecter avec Facebook, Google, Twitter et d'autres comptes sociaux.",
-            "logo": "https://ps.w.org/miniorange-login-openid/assets/icon-256x256.png",
+            "logo": {
+              "src": "/img/plugins/miniorange-social-login-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "miniOrange Social Login",
+              "className": "image_center"
+            },
             "link": "https://fr.wordpress.org/plugins/miniorange-login-openid/",
-            "version": "7.6.0",
-            "advantages": [
-              "Connexion rapide pour les utilisateurs",
-              "Supporte plusieurs réseaux sociaux"
-            ],
+            "version": {
+              "label": "7.6.0",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "miniOrange Social Login est utile pour :",
+              "items": [
+                "Faciliter l'inscription et la connexion des utilisateurs",
+                "Augmenter le taux de conversion",
+                "Réduire les abandons de panier",
+                "Supporte plusieurs réseaux sociaux",
+                "Connexion rapide pour les utilisateurs"
+              ]
+            },
             "alternative": null
           },
           {
@@ -186,10 +337,33 @@
             },
             "name": "Font Awesome",
             "description": "Ajoute facilement des icônes vectorielles FontAwesome dans votre thème WordPress.",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/Font_Awesome_5_logo.svg",
+            "logo": {
+              "src": "/img/plugins/font-awesome-plugin.png",
+              "width": 500,
+              "height": 500,
+              "alt": "Font Awesome",
+              "className": "image_center"
+            },
             "link": "https://fr.wordpress.org/plugins/font-awesome/",
-            "version": "4.3.2",
-            "advantages": ["Bibliothèque d'icônes complète", "Icônes adaptatives et légères"],
+            "version": {
+              "label": "4.3.2",
+              "className": "message",
+              "isLink": false
+            },
+            "compatibility": {
+              "label": "Compatible à 100%",
+              "className": "success",
+              "isLink": false
+            },
+            "list": {
+              "list_desc": "Font Awesome est utile pour :",
+              "items": [
+                "Accéder à une vaste bibliothèque d'icônes",
+                "Personnaliser facilement les icônes avec CSS",
+                "Intégration simple dans le thème",
+                "Icônes vectorielles évolutives"
+              ]
+            },
             "alternative": null
           }
         ]

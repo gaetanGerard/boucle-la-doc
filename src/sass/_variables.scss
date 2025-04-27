@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 /*--------------------------------------------------------------
 # Variables
@@ -16,8 +16,8 @@ $max-section-width: 1500px;
 
 // fonts family
 
-$main_font: "Poppins";
-$cursive_font: "Corinthia";
+$main_font: 'Poppins';
+$cursive_font: 'Corinthia';
 
 // font sizes
 $font_size_xs: 0.8rem;
@@ -111,6 +111,14 @@ $btn_color_tertiary_hover: color.adjust($tertiary_color, $lightness: 10%);
 $btn_color_tertiary_active: color.adjust($tertiary_color, $blackness: 10%);
 $btn_color_disabled: color.adjust($tertiary_color, $lightness: 30%);
 $btn_color_disabled_hover: color.adjust($btn_color_disabled, $blackness: 5%);
+$error_chip: #ff4d4f;
+$error_chip_hover: color.adjust($error_chip, $blackness: 10%);
+$success_chip: #52c41a;
+$success_chip_hover: color.adjust($success_chip, $blackness: 10%);
+$warning_chip: #faad14;
+$warning_chip_hover: color.adjust($warning_chip, $blackness: 10%);
+$info_chip: #1890ff;
+$info_chip_hover: color.adjust($info_chip, $blackness: 10%);
 
 /*--------------------------------------------------------------
 # Borders

@@ -57,6 +57,18 @@
   font-size: $font_size_lg;
   font-weight: $font_weight_bold;
   color: $subheading_color;
+
+  &_link {
+    font-size: $font_size_lg;
+    font-weight: $font_weight_bold;
+    color: $subheading_color;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .hero_title {

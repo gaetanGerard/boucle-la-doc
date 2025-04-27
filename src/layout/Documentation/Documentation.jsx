@@ -45,10 +45,6 @@ const Documentation = ({ slug }) => {
     }
   }, [slug]);
 
-  console.log(slug)
-
-  console.log(data);
-
   return (
     <main className={styles.container}>
       <RenderSideNav nav={sideNav} />

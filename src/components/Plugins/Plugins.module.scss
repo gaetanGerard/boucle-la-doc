@@ -1,0 +1,13 @@
+@use '@/sass' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5px;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+    gap: 40px;
+  }
+}

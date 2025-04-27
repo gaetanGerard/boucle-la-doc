@@ -6,9 +6,11 @@ import styles from "./DocContent.module.scss";
 // Import of custom Components
 import Title from "@/components/ui/Title/Title";
 import Description from "@/components/ui/Description/Description";
+import UnorderedList from "@/components/ui/UnorderedList/UnorderedList";
+import Plugins from "@/components/Plugins/Plugins";
 
 const DocContent = ({ data }) => {
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className={clsx(styles.container, { [styles[data.layout]]: data.layout })}>
@@ -16,17 +18,11 @@ const DocContent = ({ data }) => {
 
             {data.description && <Description desc={data.description} />}
 
-            {data.image && <Image src={data.image.src} width={data.image.width} height={data.image.height} alt={`Image pour la section ${data.title.name}`} className={styles[data.image.className]} />}
+            {data.image && <Image src={data.image.src} width={data.image.width} height={data.image.height} alt={data.image.alt ? data.image.alt : data.title.name} className={styles[data.image.className]} />}
 
-            {
-                data.items && data.items.length > 0 && (
-                    <ul className={styles.itemsList}>
-                        {data.items.map((item, index) => (
-                            <li key={index}>{item}</li>
-                        ))}
-                    </ul>
-                )
-            }
+            {data.list && <UnorderedList list={data.list} />}
+
+            {data.plugins && <Plugins plugins={data.plugins} />}
         </div >
     );
 };

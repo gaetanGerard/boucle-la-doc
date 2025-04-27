@@ -1,4 +1,4 @@
-@use "@/sass" as *;
+@use '@/sass' as *;
 
 .techItem {
   background: $chip_background_color;
@@ -8,8 +8,54 @@
   font-weight: $font_weight_semibold;
   color: $title_color;
   transition: background 0.3s;
+  width: fit-content;
 
   &:hover {
     background: $chip_bg_color_hover;
+  }
+}
+
+.error {
+  background-color: $error_chip;
+  color: $light_color;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $error_chip_hover;
+  }
+}
+
+.success {
+  background-color: $success_chip;
+  color: $light_color;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $success_chip_hover;
+  }
+}
+
+.warning {
+  background-color: $warning_chip;
+  color: $light_color;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $warning_chip_hover;
+  }
+}
+
+.info {
+  background-color: $info_chip;
+  color: $light_color;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $info_chip_hover;
+  }
+}
+
+.message {
+  background-color: $chip_background_color;
+  color: $dark_color;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $chip_bg_color_hover;
   }
 }
