@@ -13,6 +13,8 @@ import InstallationSteps from "@/components/InstallationSteps/InstallationSteps"
 import FileTree from "@/components/FileTree/FileTree";
 import Codes from "@/components/Codes/Codes";
 import BlockAndCompoDetails from "@/components/BlockAndCompoDetails/BlockAndCompoDetails";
+import Roadmap from "@/components/Roadmap/Roadmap";
+import Changelog from "@/components/Changelog/Changelog";
 
 const DocContent = ({ data }) => {
     // console.log(data);
@@ -33,6 +35,10 @@ const DocContent = ({ data }) => {
             {data.fileTree && <FileTree data={data.fileTree} />}
             {data.codes && <Codes codes={data.codes} />}
             {data.details && <BlockAndCompoDetails details={data.details} />}
+            {data.roadmap && <Roadmap roadmapItems={data.roadmap} />}
+            {data.changelog && <Changelog entries={data.changelog} />}
+
+            {/* This part handle the Footer section */}
         </div >
     );
 };

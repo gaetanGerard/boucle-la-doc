@@ -1321,34 +1321,76 @@
           "level": 2
         },
         "description": "Cette section présente les ajouts et améliorations futures du thème, ainsi que les corrections de bugs prévues. Elle vous permet de suivre les évolutions du projet et de savoir à quoi vous attendre dans les prochaines versions.",
-        "roadmap_items": [
+        "roadmap": [
           {
-            "title": "Intégration du Customizer WordPress",
-            "slug": "customizer-integration",
-            "description": "Ajout d'intégrations supplémentaires au customizer WordPress, permettant une personnalisation encore plus poussée des options du thème directement depuis l'interface WordPress.",
-            "expected_release": "Q3 2025"
+            "title": {
+              "name": "Test Beta Version",
+              "anchor": "test-beta",
+              "level": 3
+            },
+            "description": "Lancement de la version bêta du thème pour les tests et retours d'expérience des utilisateurs.",
+            "expected_release": "Mai 2025"
           },
           {
-            "title": "Nouveaux types de produits WooCommerce",
-            "slug": "new-product-types",
-            "description": "Développement de nouveaux types de produits WooCommerce, comme les produits en précommande, les abonnements, et les produits virtuels avec des options avancées.",
+            "title": {
+              "name": "Mis en production de la version 1.0",
+              "anchor": "release-1.0",
+              "level": 3
+            },
+            "description": "Lancement de la version 1.0 du thème avec toutes les fonctionnalités de base et les blocs de composition.",
+            "expected_release": "Juin 2025"
+          },
+          {
+            "title": {
+              "name": "Création d'un lien avec github",
+              "anchor": "github-integration",
+              "level": 3
+            },
+            "description": "Intégrer Les issues Github et Roadmap dans le site de documentation pour centraliser les nouveaux tickets.",
+            "expected_release": "Juillet 2025"
+          },
+          {
+            "title": {
+              "name": "Intégration du Customizer WordPress",
+              "anchor": "customizer-integration",
+              "level": 3
+            },
+            "description": "Ajout d'intégrations supplémentaires au customizer WordPress, permettant une personnalisation encore plus poussée des options du thème directement depuis l'interface WordPress.",
             "expected_release": "Q4 2025"
           },
           {
-            "title": "Amélioration de la gestion des coupons de réduction",
-            "slug": "coupon-management-improvements",
-            "description": "Amélioration du système de gestion des coupons dans WooCommerce, y compris la prise en charge de types de réduction supplémentaires et des règles conditionnelles avancées.",
+            "title": {
+              "name": "Nouveaux types de produits WooCommerce",
+              "anchor": "new-product-types",
+              "level": 3
+            },
+            "description": "Développement de nouveaux types de produits WooCommerce, comme les produits en précommande, les abonnements, et les produits virtuels avec des options avancées.",
             "expected_release": "Q1 2026"
           },
           {
-            "title": "Optimisation des performances du panier asynchrone",
-            "slug": "async-cart-performance",
-            "description": "Optimisation des performances du panier asynchrone pour une expérience utilisateur encore plus fluide, en particulier lors de l'ajout d'articles dans des boutiques avec un grand nombre de produits.",
+            "title": {
+              "name": "Amélioration de la gestion des coupons de réduction",
+              "anchor": "coupon-management-improvements",
+              "level": 3
+            },
+            "description": "Amélioration du système de gestion des coupons dans WooCommerce, y compris la prise en charge de types de réduction supplémentaires et des règles conditionnelles avancées.",
             "expected_release": "Q2 2026"
           },
           {
-            "title": "Corrections de Bugs",
-            "slug": "bug-fixes",
+            "title": {
+              "name": "Optimisation des performances du panier asynchrone",
+              "anchor": "async-cart-performance",
+              "level": 3
+            },
+            "description": "Optimisation des performances du panier asynchrone pour une expérience utilisateur encore plus fluide, en particulier lors de l'ajout d'articles dans des boutiques avec un grand nombre de produits.",
+            "expected_release": "Q3 2026"
+          },
+          {
+            "title": {
+              "name": "Corrections de Bugs",
+              "anchor": "bug-fixes",
+              "level": 3
+            },
             "description": "Correctifs généraux pour résoudre les problèmes signalés par la communauté et améliorer la stabilité du thème.",
             "expected_release": "Chaque mois"
           }
@@ -1364,58 +1406,28 @@
           "anchor": "changelog",
           "level": 2
         },
-        "entries": [
+        "description": "Le changelog documente toutes les modifications apportées au thème, y compris les nouvelles fonctionnalités, les améliorations et les corrections de bugs. Il est mis à jour régulièrement pour refléter l'évolution du thème.",
+        "changelog": [
           {
-            "version": "1.0.0",
-            "release_date": "2025-04-01",
+            "version": "0.9.0",
+            "release_date": "25-04-2025",
             "changes": [
               {
                 "type": "Ajout",
-                "description": "Lancement initial du thème avec la prise en charge de WooCommerce et plusieurs blocs de composition personnalisés."
+                "description": "Développement principal du thème avec les fonctionnalités de base et les blocs de composition."
               },
               {
                 "type": "Amélioration",
-                "description": "Amélioration de l'intégration du panier asynchrone pour des mises à jour en temps réel sans rechargement de page."
+                "description": "N/A"
               },
               {
                 "type": "Correction de bug",
-                "description": "Correction d'un bug empêchant l'affichage correct du panier dans certaines configurations."
-              }
-            ]
-          },
-          {
-            "version": "1.1.0",
-            "release_date": "2025-05-10",
-            "changes": [
-              {
-                "type": "Ajout",
-                "description": "Ajout de la fonctionnalité de cartes cadeaux avec gestion des dates de validité et des montants restants."
+                "description": "N/A"
               },
               {
-                "type": "Amélioration",
-                "description": "Amélioration de la page de compte utilisateur, permettant la gestion des informations personnelles et des adresses de livraison."
-              },
-              {
-                "type": "Correction de bug",
-                "description": "Correction d'un problème avec l'intégration du suivi des commandes dans certaines configurations de serveur."
-              }
-            ]
-          },
-          {
-            "version": "1.2.0",
-            "release_date": "2025-06-15",
-            "changes": [
-              {
-                "type": "Ajout",
-                "description": "Ajout de nouveaux types de produits WooCommerce, y compris les produits en précommande et les abonnements."
-              },
-              {
-                "type": "Amélioration",
-                "description": "Optimisation des performances de la page d'accueil et des blocs de composition pour des chargements plus rapides."
-              },
-              {
-                "type": "Correction de bug",
-                "description": "Correction de problèmes mineurs avec l'affichage des images dans les blocs de composition sur certaines résolutions d'écran."
+                "isLink": true,
+                "type": "Lien vers Github",
+                "link": "https://github.com/gaetanGerard/boucle-la"
               }
             ]
           }

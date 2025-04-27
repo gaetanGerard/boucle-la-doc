@@ -1,0 +1,70 @@
+@use '@/sass' as *;
+
+.changelog {
+  padding: 1rem;
+}
+
+.title {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_semibold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: $title_color;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.entry {
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba($dark_color, 0.05);
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.version {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_bold;
+  color: $title_color;
+}
+
+.releaseDate {
+  font-size: $font_size_sm;
+  color: $darker_gray;
+}
+
+.changes {
+  list-style: none;
+  padding-left: 0;
+}
+
+.change {
+  margin-bottom: 1rem;
+}
+
+.changeType {
+  font-weight: $font_weight_bold;
+  color: $primary_color;
+}
+
+.changeDescription {
+  font-size: $font_size_sm;
+  color: $dark_gray;
+}
+
+.icon {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

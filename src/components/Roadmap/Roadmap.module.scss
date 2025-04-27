@@ -1,0 +1,58 @@
+@use '@/sass' as *;
+
+.roadmap {
+  padding: 1rem;
+}
+
+.title {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_semibold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: $title_color;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.roadmapItem {
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba($dark_color, 0.05);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .itemTitle {
+    font-size: $font_size_lg;
+    font-weight: $font_weight_bold;
+    color: $title_color;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    font-size: $font_size_sm;
+    color: $dark_gray;
+    margin-bottom: 1rem;
+  }
+
+  .expectedRelease {
+    font-size: $font_size_xs;
+    color: $darker_gray;
+
+    strong {
+      font-weight: $font_weight_semibold;
+    }
+  }
+}
+
+.anchor {
+  text-decoration: none;
+  color: inherit;
+}
