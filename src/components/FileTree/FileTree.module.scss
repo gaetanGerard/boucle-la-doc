@@ -3,7 +3,7 @@
 .container {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  color: #333;
+  color: $title_color;
 }
 
 .tree {
@@ -16,8 +16,8 @@
 }
 
 .folder {
-  font-weight: 600;
-  color: #2b6cb0;
+  font-weight: $font_weight_semibold;
+  color: $folder_color;
   position: relative;
   padding-left: 20px;
 
@@ -29,8 +29,8 @@
 }
 
 .file {
-  font-weight: 400;
-  color: #4a5568;
+  font-weight: $font_weight_regular;
+  color: $file_color;
   position: relative;
   padding-left: 20px;
 

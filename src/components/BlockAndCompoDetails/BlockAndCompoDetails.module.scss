@@ -1,0 +1,46 @@
+@use '@/sass' as *;
+
+.container {
+  padding: 2rem;
+  background-color: $light_color;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba($dark_color, 0.1);
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_bold;
+  margin-bottom: 1rem;
+  color: $title_color;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details h3 {
+  font-size: $font_size_md;
+  font-weight: $font_weight_semibold;
+  color: $devil_color;
+}
+
+.details p {
+  font-size: $font_size_sm;
+  color: $description_color;
+}
+
+.benefitsList {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitItem {
+  font-size: $font_size_sm;
+  color: $title_color;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}

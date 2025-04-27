@@ -11,6 +11,8 @@ import Plugins from "@/components/Plugins/Plugins";
 import Installation from "@/components/Installation/Installation";
 import InstallationSteps from "@/components/InstallationSteps/InstallationSteps";
 import FileTree from "@/components/FileTree/FileTree";
+import Codes from "@/components/Codes/Codes";
+import BlockAndCompoDetails from "@/components/BlockAndCompoDetails/BlockAndCompoDetails";
 
 const DocContent = ({ data }) => {
     // console.log(data);
@@ -29,6 +31,8 @@ const DocContent = ({ data }) => {
             {data.installation && <Installation inst={data.installation} />}
             {data.steps && <InstallationSteps steps={data.steps} />}
             {data.fileTree && <FileTree data={data.fileTree} />}
+            {data.codes && <Codes codes={data.codes} />}
+            {data.details && <BlockAndCompoDetails details={data.details} />}
         </div >
     );
 };

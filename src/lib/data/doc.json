@@ -585,7 +585,7 @@
                   "anchor": "tip-composition-block-used",
                   "level": 4
                 },
-                "description": "Pour utiliser les styles de Bo_theme, ajoutez les composition bo_theme.",
+                "description": "Pour utiliser les styles de Bo_theme, ajoutez les compositions bo_theme.",
                 "link": {
                   "link": "/documentation/blocks-and-compositions/user-features",
                   "label": "Voire la Documentation"
@@ -854,7 +854,59 @@
           "anchor": "developer-interactivity",
           "level": 2
         },
-        "description": "L'interactivité du thème est principalement gérée avec jQuery pour des opérations légères comme le menu mobile, les animations de formulaire, ou l'affichage dynamique de certains éléments. Un usage minimal de JavaScript vanilla est également présent pour améliorer la performance."
+        "description": "L'interactivité du thème est principalement gérée avec jQuery pour des opérations légères comme le menu mobile, les animations de formulaire, ou l'affichage dynamique de certains éléments. Un usage minimal de JavaScript vanilla est également présent pour améliorer la performance, la plupart du code Javascript est appeler dans le footer.php, il ne s'agit évidemment que d'échantillons de code pour vous donnez une idée de la structure.",
+        "codes": [
+          {
+            "title": {
+              "name": "Visibilité du menu mobile",
+              "anchor": "mobile-menu-visibility",
+              "level": 3
+            },
+            "description": "Ce code gère la visibilité ou non du menu responsive.",
+            "language": "javascript",
+            "code": "document.getElementById('mobile-menu-toggle').addEventListener('click', function () {\n    const mobileMenu = document.getElementById('mobile-menu');\n    mobileMenu.classList.toggle('mobile-menu-open');\n});\n\ndocument.getElementById('close-mobile-menu').addEventListener('click', function () {\n    const mobileMenu = document.getElementById('mobile-menu');\n    mobileMenu.classList.remove('mobile-menu-open');\n});"
+          },
+          {
+            "title": {
+              "name": "jQuery - Ajout au panier",
+              "anchor": "jquery-add-to-cart",
+              "level": 3
+            },
+            "description": "Ce script permet de rafraîchir le fragment du panier lorsque quelque chose est ajouté au panier.",
+            "language": "javascript",
+            "code": "jQuery(document.body).on('added_to_cart', function () {\n    jQuery(document.body).trigger('wc_fragment_refresh');\n});"
+          },
+          {
+            "title": {
+              "name": "Gestion de la visibilité du panneau du panier",
+              "anchor": "side-panel-cart-visibility",
+              "level": 3
+            },
+            "description": "Ce script gère l'affichage et la fermeture du panneau du panier en fonction des actions des utilisateurs, y compris l'interaction avec les boutons et les clics à l'extérieur du panneau.",
+            "language": "javascript",
+            "code": "// Handle toggle cart panel visibility\ndocument.addEventListener('DOMContentLoaded', function () {\n    const cartPanel = document.getElementById('cart-panel');\n    const cartToggleButtons = [\n        document.getElementById('shopping-cart-menu-toggle-desktop'),\n        document.getElementById('shopping-cart-menu-toggle-mobile')\n    ];\n    const closeCartButton = document.getElementById('close-cart-panel');\n\n    if (cartPanel && cartToggleButtons.every(button => button)) {\n\n        cartToggleButtons.forEach(button => {\n            button.addEventListener('click', () => {\n                cartPanel.classList.add('cart-panel-open');\n            });\n        });\n\n        if (closeCartButton) {\n            closeCartButton.addEventListener('click', () => {\n                cartPanel.classList.remove('cart-panel-open');\n            });\n        }\n\n        document.addEventListener('click', (event) => {\n            if (!cartPanel.contains(event.target) && !cartToggleButtons.some(button => button.contains(event.target))) {\n                cartPanel.classList.remove('cart-panel-open');\n            }\n        });\n    } else {\n        console.error('Cart panel or toggle buttons not found.');\n    }\n});"
+          },
+          {
+            "title": {
+              "name": "Gestion de la suppression d'un article du panier via AJAX",
+              "anchor": "remove-item-cart-ajax",
+              "level": 3
+            },
+            "description": "Ce script permet de supprimer un article du panier sans recharger la page en utilisant AJAX, et rafraîchit le panier avec un appel à l'action 'wc_fragment_refresh'.",
+            "language": "javascript",
+            "code": "// Handle remove item from cart via AJAX\njQuery(function ($) {\n    $(document).on('click', '.btn-remove-item-from-cart', function (event) {\n        event.preventDefault();\n        var cartKey = $(this).closest('.product-card').data('cart-item-key');\n        $.post('<?php echo admin_url(\"admin-ajax.php\"); ?>', {\n            action: 'remove_from_cart',\n            cart_item_key: cartKey\n        }, function (response) {\n            if (response.success) {\n                $(document.body).trigger('wc_fragment_refresh');\n            } else {\n                alert(response.data.message || '<?php esc_html_e('Erreur lors de la suppression du produit.', 'bo-theme'); ?>');\n            }\n        });\n    });\n});"
+          },
+          {
+            "title": {
+              "name": "Gérer la visibilité du mot de passe",
+              "anchor": "password-visibility",
+              "level": 3
+            },
+            "description": "Ce script permet de basculer la visibilité d'un mot de passe dans un champ de formulaire en affichant ou masquant l'icône de l'œil.",
+            "language": "javascript",
+            "code": "// Button to handle password visibility\ndocument.addEventListener('DOMContentLoaded', function () {\n    document.querySelectorAll('.toggle-password-visibility').forEach(function (btn) {\n        btn.addEventListener('click', function () {\n            const targetId = btn.getAttribute('data-target');\n            const input = document.getElementById(targetId);\n            const eye = btn.querySelector('.icon-eye');\n            const eyeOff = btn.querySelector('.icon-eye-off');\n            if (input.type === 'password') {\n                input.type = 'text';\n                eye.style.display = 'none';\n                eyeOff.style.display = '';\n            } else {\n                input.type = 'password';\n                eye.style.display = '';\n                eyeOff.style.display = 'none';\n            }\n        });\n    });\n});"
+          }
+        ]
       },
       {
         "navItem": {
@@ -866,7 +918,79 @@
           "anchor": "developer-php",
           "level": 2
         },
-        "description": "Le thème utilise les bonnes pratiques de développement WordPress en PHP :\n- Utilisation de fonctions natives WordPress\n- Sécurisation des données (esc_html, esc_url, wp_nonce)\n- Respect de la hiérarchie des templates\n- Personnalisation WooCommerce via des templates override."
+        "description": "Le thème utilise les bonnes pratiques de développement WordPress en PHP :\n- Utilisation de fonctions natives WordPress\n- Sécurisation des données (esc_html, esc_url, wp_nonce)\n- Respect de la hiérarchie des templates\n- Personnalisation WooCommerce via des templates override, il ne s'agit évidemment que d'échantillons de code pour vous donnez une idée de la structure.",
+        "codes": [
+          {
+            "title": {
+              "name": "Modifier le style du bouton de la fiche produit",
+              "anchor": "product-card-button-style",
+              "level": 3
+            },
+            "description": "Ce script modifie le style du bouton d'ajout au panier pour les produits en rupture de stock en WooCommerce.",
+            "language": "php",
+            "code": "// change style of the button for the product card\n// Add a condition to check if the product is in stock or not\n// If the product is not in stock, add a class to the button and change the text\nadd_action('woocommerce_after_shop_loop_item', function () {\n\tglobal $product;\n\n\tif (!$product->is_in_stock()) {\n\t\techo apply_filters(\n\t\t\t'woocommerce_loop_add_to_cart_link',\n\t\t\tsprintf(\n\t\t\t\t'<a href=\"#\" class=\"button add_to_cart_button disabled\" style=\"pointer-events: none; background-color: #ccc; color: #666;\" aria-disabled=\"true\">%s</a>',\n\t\t\t\tesc_html__('Rupture de stock', 'woocommerce')\n\t\t\t),\n\t\t\t$product\n\t\t);\n\t} else {\n\t\techo apply_filters(\n\t\t\t'woocommerce_loop_add_to_cart_link',\n\t\t\tsprintf(\n\t\t\t\t'<a href=\"%s\" data-quantity=\"1\" class=\"button add_to_cart_button\" %s>%s</a>',\n\t\t\t\tesc_url($product->add_to_cart_url()),\n\t\t\t\twc_implode_html_attributes(array(\n\t\t\t\t\t'data-product_id' => $product->get_id(),\n\t\t\t\t\t'data-product_sku' => $product->get_sku(),\n\t\t\t\t\t'aria-label' => $product->add_to_cart_description(),\n\t\t\t\t\t'rel' => 'nofollow',\n\t\t\t)),\n\t\t\t\tesc_html($product->add_to_cart_text())\n\t\t\t),\n\t\t\t$product\n\t\t);\n\t}\n}, 10);"
+          },
+          {
+            "title": {
+              "name": "Passer la quantité de produits dans l'URL",
+              "anchor": "products-per-page-url",
+              "level": 3
+            },
+            "description": "Ce script permet de modifier le nombre de produits affichés par page sur la boutique WooCommerce en fonction d'un paramètre passé dans l'URL.",
+            "language": "php",
+            "code": "// Pass the amount of product in the url\nadd_filter('loop_shop_per_page', function ($cols) {\n\tif (isset($_GET['products_per_page'])) {\n\t\t$per_page = intval($_GET['products_per_page']);\n\n\t\t$allowed = [12, 24, 48, 96];\n\t\tif (in_array($per_page, $allowed)) {\n\t\t\treturn $per_page;\n\t\t}\n\t}\n\n\treturn $cols;\n}, 20);"
+          },
+          {
+            "title": {
+              "name": "Fonction AJAX pour retirer un produit du panier",
+              "anchor": "remove-from-cart-ajax",
+              "level": 3
+            },
+            "description": "Ce code gère la suppression d'un produit du panier via AJAX et met à jour le contenu du panier sur le front-end.",
+            "language": "php",
+            "code": "// Ajax function to remove a product from the cart\nadd_action('wp_ajax_remove_from_cart', 'bo_theme_remove_from_cart');\nadd_action('wp_ajax_nopriv_remove_from_cart', 'bo_theme_remove_from_cart');\nfunction bo_theme_remove_from_cart()\n{\n\tif (!isset($_POST['cart_item_key'])) {\n\t\twp_send_json_error(['message' => 'Clé du panier manquante.']);\n\t}\n\n\t$cart_item_key = sanitize_text_field($_POST['cart_item_key']);\n\t$removed = WC()->cart->remove_cart_item($cart_item_key);\n\n\tif ($removed) {\n\t\t$cart_count = WC()->cart->get_cart_contents_count();\n\t\t$cart_html = '';\n\n\t\tob_start();\n\t\tget_template_part('partials/cart-panel-body');\n\t\t$cart_html = ob_get_clean();\n\n\t\twp_send_json_success([\n\t\t\t'cart_count' => $cart_count,\n\t\t\t'cart_html' => $cart_html,\n\t\t\t'cart_total' => WC()->cart->get_cart_total(),\n\t\t\t'message' => $cart_count === 0 ? 'Votre panier est actuellement vide.' : '',\n\t\t]);\n\t} else {\n\t\twp_send_json_error(['message' => 'Impossible de supprimer cet article.']);\n\t}\n}"
+          },
+          {
+            "title": {
+              "name": "Fonction AJAX pour augmenter la quantité ou le montant de la carte cadeau",
+              "anchor": "increase-cart-item-ajax",
+              "level": 3
+            },
+            "description": "Ce code gère l'augmentation de la quantité d'un produit dans le panier ou l'augmentation du montant d'une carte cadeau via AJAX.",
+            "language": "php",
+            "code": "// AJAX function to increase quantity or gift card amount\nadd_action('wp_ajax_increase_cart_item', 'bo_theme_increase_cart_item');\nadd_action('wp_ajax_nopriv_increase_cart_item', 'bo_theme_increase_cart_item');\nfunction bo_theme_increase_cart_item()\n{\n\tif (!isset($_POST['cart_item_key'])) {\n\t\twp_send_json_error(['message' => 'Clé du panier manquante.']);\n\t}\n\t$cart_item_key = sanitize_text_field($_POST['cart_item_key']);\n\t$items = WC()->cart->get_cart();\n\n\tif (empty($items[$cart_item_key])) {\n\t\twp_send_json_error(['message' => 'Article introuvable.']);\n\t}\n\n\t$cart_item = $items[$cart_item_key];\n\t$product = $cart_item['data'];\n\n\tif ($product && method_exists($product, 'get_type') && $product->get_type() === 'gift_card') {\n\t\t$current_amount = isset($cart_item['gift_card_amount']) ? floatval($cart_item['gift_card_amount']) : floatval($product->get_price());\n\t\t$new_amount = $current_amount + 5;\n\t\t$cart_item['gift_card_amount'] = $new_amount;\n\t\t$product->set_price($new_amount);\n\t\tWC()->cart->cart_contents[$cart_item_key] = $cart_item;\n\t\tWC()->cart->calculate_totals();\n\t} else {\n\t\t$current_qty = $cart_item['quantity'];\n\t\tWC()->cart->set_quantity($cart_item_key, $current_qty + 1, true);\n\t}\n\twp_send_json_success();\n}"
+          },
+          {
+            "title": {
+              "name": "Fonction AJAX pour diminuer la quantité ou le montant de la carte cadeau",
+              "anchor": "decrease-cart-item-ajax",
+              "level": 3
+            },
+            "description": "Ce code gère la diminution de la quantité d'un produit dans le panier ou la diminution du montant d'une carte cadeau via AJAX.",
+            "language": "php",
+            "code": "// AJAX function to decrease quantity or gift card amount\nadd_action('wp_ajax_decrease_cart_item', 'bo_theme_decrease_cart_item');\nadd_action('wp_ajax_nopriv_decrease_cart_item', 'bo_theme_decrease_cart_item');\nfunction bo_theme_decrease_cart_item()\n{\n\tif (empty($_POST['cart_item_key'])) {\n\t\twp_send_json_error(['message' => 'Clé du panier manquante.']);\n\t}\n\t$cart_item_key = sanitize_text_field($_POST['cart_item_key']);\n\t$cart = WC()->cart->get_cart();\n\n\tif (empty($cart[$cart_item_key])) {\n\t\twp_send_json_error(['message' => 'Article introuvable.']);\n\t}\n\n\t$cart_item = $cart[$cart_item_key];\n\t$product = $cart_item['data'];\n\n\tif ($product && method_exists($product, 'get_type') && $product->get_type() === 'gift_card') {\n\t\t$current_amount = isset($cart_item['gift_card_amount']) ? floatval($cart_item['gift_card_amount']) : floatval($product->get_price());\n\t\t$new_amount = $current_amount - 5;\n\t\tif ($new_amount < 5) {\n\t\t\t$new_amount = 5;\n\t\t}\n\t\t$cart_item['gift_card_amount'] = $new_amount;\n\t\t$product->set_price($new_amount);\n\t\tWC()->cart->cart_contents[$cart_item_key] = $cart_item;\n\t\tWC()->cart->calculate_totals();\n\t} else {\n\t\t$current_qty = $cart_item['quantity'];\n\t\tif ($current_qty <= 1) {\n\t\t\tWC()->cart->remove_cart_item($cart_item_key);\n\t\t} else {\n\t\t\tWC()->cart->set_quantity($cart_item_key, $current_qty - 1, true);\n\t\t}\n\t\tWC()->cart->calculate_totals();\n\t}\n\twp_send_json_success();\n}"
+          },
+          {
+            "title": {
+              "name": "Modifier le titre et l'URL du menu de navigation pour un utilisateur connecté",
+              "anchor": "user-logged-in-menu",
+              "level": 3
+            },
+            "description": "Ce code permet de modifier le titre et l'URL d'un élément de menu de navigation pour les utilisateurs connectés, en remplaçant le lien 'Connexion' ou 'Mon compte' par le nom d'utilisateur et l'URL du compte.",
+            "language": "php",
+            "code": "add_filter('wp_nav_menu_objects', function ($items) {\n\tif (!is_user_logged_in())\n\t\treturn $items;\n\t$user = wp_get_current_user();\n\t$display_name = $user->display_name ? $user->display_name : $user->user_login;\n\t$account_url = wc_get_page_permalink('myaccount');\n\t$login_url = site_url('/login');\n\tforeach ($items as $item) {\n\t\tif (isset($item->url)) {\n\t\t\t$item_url = untrailingslashit($item->url);\n\t\t\tif ($item_url === untrailingslashit($login_url) || $item_url === untrailingslashit($account_url)) {\n\t\t\t\t$item->title = esc_html($display_name);\n\t\t\t\t$item->url = $account_url;\n\t\t\t}\n\t\t}\n\t}\n\treturn $items;\n});"
+          },
+          {
+            "title": {
+              "name": "Définir dynamiquement l'image de fond de la page de connexion/inscription",
+              "anchor": "login-background-image",
+              "level": 3
+            },
+            "description": "Ce code permet de définir dynamiquement l'image de fond de la page de connexion/inscription en utilisant la première image présente dans le contenu de la page (si elle existe), ou l'image à la une si aucune image n'est trouvée.",
+            "language": "php",
+            "code": "add_action('wp_head', function () {\n\tif (is_page('login')) {\n\t\tglobal $post;\n\t\tif (!$post)\n\t\t\treturn;\n\t\t$content = $post->post_content;\n\t\t$image_url = '';\n\t\t// Try to get first <img> src from content\n\t\tif (preg_match('/<img[^>]+src=[\"\\']([^\\\"\\']+)[\"\\']/i', $content, $matches)) {\n\t\t\t$image_url = esc_url($matches[1]);\n\t\t}\n\t\t// If not found, try featured image\n\t\tif (!$image_url && has_post_thumbnail($post)) {\n\t\t\t$image_url = get_the_post_thumbnail_url($post, 'full');\n\t\t}\n\t\tif ($image_url) {\n\t\t\techo '<style>.login-form-container .wp-block-column:last-child {background-image: url(' . esc_url($image_url) . ') !important;}</style>';\n\t\t}\n\t}\n});"
+          }
+        ]
       },
       {
         "navItem": {
@@ -878,7 +1002,39 @@
           "anchor": "developer-scss",
           "level": 2
         },
-        "description": "Le style est structuré à l'aide de SCSS pour faciliter la modularité et la maintenance du code. Un fichier principal `style.scss` importe tous les modules nécessaires (variables, mixins, bases, layouts, components)."
+        "description": "Le style est structuré à l'aide de SCSS pour faciliter la modularité et la maintenance du code. Un fichier principal `style.scss` importe tous les modules nécessaires (variables, mixins, bases, layouts, components), il ne s'agit évidemment que d'échantillons de code pour vous donnez une idée de la structure.",
+        "codes": [
+          {
+            "title": {
+              "name": "Style de la page de réinitialisation du mot de passe",
+              "anchor": "lost-password-page",
+              "level": 3
+            },
+            "description": "Ce code SCSS applique un style à la page de réinitialisation du mot de passe avec une disposition centrée et un formulaire de réinitialisation qui s'ajuste en fonction de la taille de l'écran.",
+            "language": "scss",
+            "code": "// Lost Password Page\n.lost-password-page {\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  .lost-password-container {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    form {\n      display: flex;\n      flex-direction: column;\n      place-content: center;\n      place-items: center;\n      width: 100%;\n      text-align: center;\n      gap: 1rem;\n\n      p {\n        display: flex;\n        flex-direction: column;\n        margin-bottom: 1rem;\n\n        label {\n          font-weight: 500;\n          font-size: 0.875rem;\n          margin-bottom: 0.25rem;\n        }\n\n        input[type=\"text\"],\n        input[type=\"email\"],\n        input[type=\"password\"] {\n          padding: 0.75rem;\n          border: 1px solid #d1d5db;\n          background-color: #fff;\n          font-size: 0.95rem;\n          color: #111;\n          border-radius: 4px;\n          margin-top: 0.25rem;\n          width: 100%;\n        }\n\n        select {\n          padding: 0.75rem;\n          border: 1px solid #d1d5db;\n          background-color: #fff;\n          font-size: 0.95rem;\n          color: #111;\n          border-radius: 4px;\n          margin-top: 0.25rem;\n          width: 100%;\n          transition: all 0.3s;\n          appearance: none;\n          -webkit-appearance: none;\n          -moz-appearance: none;\n\n          &:focus {\n            outline: none;\n            border-color: #d9d9d9;\n          }\n        }\n      }\n\n      @media (min-width: 768px) {\n        width: 50%;\n      }\n    }\n  }\n\n  .confirm-msg-container {\n    width: 90%;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    justify-items: center;\n    gap: 1rem;\n    a {\n      width: fit-content;\n      margin: 0 auto;\n    }\n\n    @media (min-width: 768px) {\n      width: 50%;\n    }\n  }\n}"
+          },
+          {
+            "title": {
+              "name": "Payement Methods",
+              "anchor": "payment-methods",
+              "level": 3
+            },
+            "description": "Ce code SCSS applique un style aux méthodes de paiement, avec des ajustements pour l'apparence des champs, des boutons radio, et la mise en page générale de la page de checkout.",
+            "language": "scss",
+            "code": "// Payement Methods\n#add_payment_method {\n  background: #f7f7fa;\n  border-radius: 10px;\n  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);\n  padding: 2rem 1.5rem;\n  margin-bottom: 2rem;\n  max-width: 600px;\n  .woocommerce-Payment {\n    ul.woocommerce-PaymentMethods {\n      li {\n        padding: 1rem 0;\n        .input-container {\n          display: flex;\n          align-items: center;\n          gap: 1rem;\n          margin-bottom: 1rem;\n          input[type=\"radio\"] {\n            accent-color: #e6005a;\n          }\n          label {\n            display: flex;\n            flex-direction: row;\n            justify-content: space-between;\n            width: 100%;\n          }\n        }\n      }\n    }\n  }\n}\n\n.boucle-la-checkout {\n  padding: 150px 5% !important;\n\n  #contact-fields,\n  #shipping-fields,\n  #billing-fields,\n  #shipping-option,\n  #payment-method,\n  .wp-block-woocommerce-checkout-order-summary-block {\n    background: #f7f7fa;\n    border-radius: 10px;\n    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);\n    padding: 2rem 1.5rem;\n    margin-bottom: 2rem;\n    flex: 1 1 0;\n    min-width: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: start;\n\n    .wc-block-components-radio-control-accordion-option,\n    .wc-block-components-shipping-rates-control__package,\n    .wc-block-components-radio-control,\n    .wc-block-components-address-card {\n      background-color: white;\n    }\n  }\n\n  #shipping-option,\n  #payment-method {\n    input[type=\"radio\"] {\n      &:before {\n        background-color: #e6005a;\n      }\n    }\n  }\n  .wc-block-checkout__sidebar {\n    margin-top: 0 !important;\n  }\n}"
+          },
+          {
+            "title": {
+              "name": "Mixin for the links",
+              "anchor": "link-mixin",
+              "level": 3
+            },
+            "description": "Ce mixin définit les styles de base pour les liens, y compris les propriétés de typographie, la couleur, l'effet au survol et d'autres ajustements visuels.",
+            "language": "scss",
+            "code": "// Mixin for the links\n@mixin link(\n  $font-family: $main_font,\n  $color: inherit,\n  $hover_color: $secondary_color,\n  $font-size: 1.2rem,\n  $font-weight: 600,\n  $text-transform: uppercase,\n  $letter-spacing: 0.1rem\n) {\n  font-family: $font-family;\n  font-size: $font-size;\n  font-weight: $font-weight;\n  text-transform: $text-transform;\n  letter-spacing: $letter-spacing;\n  cursor: pointer;\n  transition: color 0.3s ease-in-out;\n  color: $color;\n\n  &:hover {\n    color: $hover_color;\n    text-decoration: underline;\n  }\n}"
+          }
+        ]
       },
       {
         "navItem": {
@@ -891,21 +1047,26 @@
           "level": 2
         },
         "description": "Le thème propose quelques hooks et filtres personnalisés pour permettre une extensibilité facile. Voici des exemples génériques :",
-        "customHooks": [
+        "codes": [
           {
-            "name": "theme_before_content",
-            "type": "Action",
-            "description": "Permet d'injecter du contenu avant l'affichage principal."
+            "title": {
+              "name": "Shortcode [multi_step_register_form] Display Multi Step Register Form",
+              "anchor": "multi-step-register-form",
+              "level": 3
+            },
+            "description": "Cette fonction crée un shortcode WordPress pour afficher un formulaire d'inscription multi-étapes en incluant un fichier PHP spécifique dans le thème.",
+            "language": "php",
+            "code": "// Shortcode [multi_step_register_form] Display Multi Step Register Form\nfunction bo_theme_multi_step_register_form_shortcode()\n{\n\tob_start();\n\tinclude get_template_directory() . '/woocommerce/auth/register.php';\n\treturn ob_get_clean();\n}\nadd_shortcode('multi_step_register_form', 'bo_theme_multi_step_register_form_shortcode');"
           },
           {
-            "name": "theme_after_content",
-            "type": "Action",
-            "description": "Permet d'injecter du contenu après l'affichage principal."
-          },
-          {
-            "name": "theme_filter_product_title",
-            "type": "Filter",
-            "description": "Permet de modifier dynamiquement les titres de produits WooCommerce."
+            "title": {
+              "name": "Shortcode [woocommerce_login_form] Only Login Form",
+              "anchor": "woocommerce-login-form",
+              "level": 3
+            },
+            "description": "Cette fonction crée un shortcode WordPress pour afficher uniquement un formulaire de connexion WooCommerce, avec un message personnalisé si l'utilisateur est déjà connecté.",
+            "language": "php",
+            "code": "// Shortcode [woocommerce_login_form] Only Login Form\nfunction custom_woocommerce_login_form()\n{\n\tif (is_user_logged_in()) {\n\t\treturn '<p>' . __('Vous êtes déjà connecté.', 'bo-theme') . '</p>';\n\t}\n\tob_start();\n\t?>\n\t<div class=\"login-woocommerce-section\">\n\t\t<?php woocommerce_login_form([\n\t\t\t'redirect' => wc_get_page_permalink('myaccount'),\n\t\t\t'hidden' => false\n\t\t]); ?>\n\t</div>\n\t<div style=\"display: flex; align-items: center; margin: 2rem 0;\">\n\t\t<hr style=\"flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 1rem;\" />\n\t\t<span style=\"font-weight: bold; color: #888;\">OU</span>\n\t\t<hr style=\"flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 1rem;\" />\n\t</div>\n\t<?php\n\treturn ob_get_clean();\n}\nadd_shortcode('woocommerce_login_form', 'custom_woocommerce_login_form');"
           }
         ]
       }
@@ -927,29 +1088,8 @@
           "anchor": "unique-features",
           "level": 2
         },
-        "description": "Cette section présente les fonctionnalités uniques du thème, qui ne sont pas disponibles dans d'autres thèmes WordPress et ont été développer uniquement pour se thème.",
+        "description": "Cette section présente les fonctionnalités uniques du thème, qui ne sont pas disponibles dans d'autres thèmes WordPress et ont été développer uniquement pour ce thème.",
         "children": [
-          {
-            "navItem": {
-              "label": "Carte Cadeau",
-              "slug": "gift-card"
-            },
-            "title": {
-              "name": "Carte Cadeau",
-              "anchor": "gift-card",
-              "level": 3
-            },
-            "image": "/images/compositions/gift-card.png",
-            "description": "Le bloc Carte Cadeau permet aux utilisateurs de créer et d'offrir des cartes cadeaux pour leur boutique WooCommerce.",
-            "where_to_use": "Page d'accueil, page produit, ou lors de promotions spéciales.",
-            "why_use": "Cette composition permet de gérer facilement les cartes cadeaux sans avoir à recourir à des extensions tierces. Vous pouvez générer des codes uniques, définir une date de validité, et suivre les montants restants.",
-            "benefits": [
-              "Génère des codes cadeaux automatiquement",
-              "Prise en charge de la date de validité",
-              "Suivi du solde disponible",
-              "Entièrement gratuite et intégrée au thème"
-            ]
-          },
           {
             "navItem": {
               "label": "Panier Asynchrone",
@@ -960,15 +1100,23 @@
               "anchor": "async-cart",
               "level": 3
             },
-            "image": "/images/compositions/async-cart.png",
+            "image": {
+              "src": "/img/features/async-cart.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Panier asynchrone.",
+              "className": "image_center"
+            },
             "description": "Le panier asynchrone permet aux utilisateurs de mettre à jour leur panier sans recharger la page.",
-            "where_to_use": "Page produit, page panier, lors de l'ajout d'articles au panier.",
-            "why_use": "Améliore l'expérience utilisateur en permettant des mises à jour instantanées du panier sans perdre de temps avec des rechargements de page.",
-            "benefits": [
-              "Panier qui se met à jour en temps réel",
-              "Aucune interruption de l'expérience utilisateur",
-              "Compatible avec tous les types de produits WooCommerce"
-            ]
+            "details": {
+              "where_to_use": "Page produit, page panier, lors de l'ajout d'articles au panier.",
+              "why_use": "Améliore l'expérience utilisateur en permettant des mises à jour instantanées du panier sans perdre de temps avec des rechargements de page.",
+              "benefits": [
+                "Panier qui se met à jour en temps réel",
+                "Aucune interruption de l'expérience utilisateur",
+                "Compatible avec tous les types de produits WooCommerce"
+              ]
+            }
           },
           {
             "navItem": {
@@ -980,31 +1128,23 @@
               "anchor": "user-account-page",
               "level": 3
             },
+            "image": {
+              "src": "/img/features/user-account.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Compte utilisateur.",
+              "className": "image_center"
+            },
             "description": "La page de compte utilisateur permet à chaque client de gérer ses informations personnelles, ses commandes passées et ses préférences.",
-            "details": "Les utilisateurs peuvent se connecter pour consulter leur historique de commandes, gérer leurs informations de paiement et leurs adresses de livraison.",
-            "benefits": [
-              "Facilite la gestion des informations personnelles",
-              "Permet de suivre l'état des commandes en temps réel",
-              "Améliore l'interaction avec les clients"
-            ]
-          },
-          {
-            "navItem": {
-              "label": "Suivi des Commandes",
-              "slug": "order-tracking"
-            },
-            "title": {
-              "name": "Suivi des Commandes",
-              "anchor": "order-tracking",
-              "level": 3
-            },
-            "description": "Le suivi des commandes permet aux utilisateurs de suivre l'état de leurs commandes directement depuis leur compte.",
-            "details": "Chaque commande affiche un statut, des détails sur les produits achetés, ainsi qu'un lien vers les informations de livraison.",
-            "benefits": [
-              "Transparence totale pour le client",
-              "Réduit les demandes au support client",
-              "Facilite la gestion des retours"
-            ]
+            "details": {
+              "where_to_use": "Page de compte utilisateur dans le menu principal.",
+              "why_use": "Permet aux utilisateurs de gérer facilement leurs informations et commandes, améliorant ainsi l'expérience client.",
+              "benefits": [
+                "Facilite la gestion des informations personnelles",
+                "Permet de suivre l'état des commandes en temps réel",
+                "Améliore l'interaction avec les clients"
+              ]
+            }
           },
           {
             "navItem": {
@@ -1016,13 +1156,23 @@
               "anchor": "shipping-addresses",
               "level": 3
             },
+            "image": {
+              "src": "/img/features/manage-address.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Manage Address.",
+              "className": "image_center"
+            },
             "description": "Les utilisateurs peuvent gérer plusieurs adresses de livraison et choisir celle qu'ils préfèrent pour chaque commande.",
-            "details": "Cette fonctionnalité simplifie le processus de commande pour les clients récurrents et leur permet de s'assurer que leurs produits sont envoyés à la bonne adresse.",
-            "benefits": [
-              "Plusieurs adresses enregistrées",
-              "Choix facile lors de la commande",
-              "Système flexible pour les clients"
-            ]
+            "details": {
+              "where_to_use": "Page de compte utilisateur, lors du passage à la caisse.",
+              "why_use": "Permet aux utilisateurs de gagner du temps en enregistrant plusieurs adresses et en les sélectionnant facilement lors de leurs achats.",
+              "benefits": [
+                "Gagnez du temps lors des achats",
+                "Facilite l'envoi de cadeaux",
+                "Améliore l'expérience utilisateur"
+              ]
+            }
           },
           {
             "navItem": {
@@ -1034,13 +1184,23 @@
               "anchor": "order-history",
               "level": 3
             },
+            "image": {
+              "src": "/img/features/order-history.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Order History.",
+              "className": "image_center"
+            },
             "description": "Les utilisateurs peuvent consulter l'historique de leurs commandes passées, y compris les détails des produits et les statuts.",
-            "details": "Cette fonctionnalité permet aux clients de garder une trace de leurs achats et de gérer facilement les retours ou échanges.",
-            "benefits": [
-              "Accès rapide à l'historique d'achat",
-              "Facilite la gestion des retours",
-              "Améliore la satisfaction client"
-            ]
+            "details": {
+              "where_to_use": "Page de compte utilisateur, page de confirmation de commande.",
+              "why_use": "Permet aux utilisateurs de garder une trace de leurs achats et d'accéder facilement aux informations sur les commandes passées.",
+              "benefits": [
+                "Facilite le suivi des achats",
+                "Améliore la transparence avec le client",
+                "Réduit les demandes au support client"
+              ]
+            }
           }
         ]
       },
@@ -1066,14 +1226,23 @@
               "anchor": "hero-highimpact",
               "level": 3
             },
-            "image": "/images/compositions/hero-highimpact.png",
+            "image": {
+              "src": "/img/composition/hero-highimpact.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Hero High Impact.",
+              "className": "image_center"
+            },
             "description": "Le bloc Hero HighImpact est une section visuellement percutante, idéale pour présenter les éléments clés de votre site.",
-            "why_use": "Ce bloc est conçu pour attirer l'attention avec des visuels grands et engageants. Il permet de mettre en valeur des informations importantes telles que des promotions ou des événements.",
-            "benefits": [
-              "Design optimisé pour l'impact visuel",
-              "Facile à personnaliser",
-              "Idéal pour les annonces de grande envergure"
-            ]
+            "details": {
+              "where_to_use": "Page d'accueil, pages de destination, ou sections importantes de votre site.",
+              "why_use": "Utilisez ce bloc pour attirer l'attention sur des promotions, des produits phares ou des messages importants.",
+              "benefits": [
+                "Attire l'attention des visiteurs",
+                "Facile à personnaliser",
+                "Améliore l'engagement utilisateur"
+              ]
+            }
           },
           {
             "navItem": {
@@ -1085,14 +1254,23 @@
               "anchor": "hero-lowimpact",
               "level": 3
             },
-            "image": "/images/compositions/hero-lowimpact.png",
+            "image": {
+              "src": "/img/composition/hero-lowimpact.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Hero LowImpact.",
+              "className": "image_center"
+            },
             "description": "Le bloc Hero LowImpact offre un design plus subtil mais élégant, idéal pour les messages moins intrusifs.",
-            "why_use": "Utilisez ce bloc lorsque vous voulez que l'accent soit mis sur des informations importantes, sans être trop intrusif.",
-            "benefits": [
-              "Design plus discret",
-              "Adapté aux pages plus formelles",
-              "Facile à adapter au style de votre marque"
-            ]
+            "details": {
+              "where_to_use": "Page d'accueil, pages de destination, ou sections moins prioritaires.",
+              "why_use": "Utilisez ce bloc pour des messages moins urgents ou pour compléter d'autres sections sans surcharger visuellement la page.",
+              "benefits": [
+                "Design élégant et subtil",
+                "Facile à intégrer dans différentes mises en page",
+                "Améliore l'esthétique générale du site"
+              ]
+            }
           },
           {
             "navItem": {
@@ -1104,14 +1282,23 @@
               "anchor": "about-section",
               "level": 3
             },
-            "image": "/images/compositions/about-section.png",
+            "image": {
+              "src": "/img/composition/about-section.png",
+              "width": 1200,
+              "height": 1200,
+              "alt": "Section à propos.",
+              "className": "image_center"
+            },
             "description": "Le bloc About Section est conçu pour présenter des informations sur votre entreprise ou votre mission.",
-            "why_use": "Ce bloc est idéal pour fournir des informations claires et structurées sur ce que fait votre entreprise et ce qui la distingue.",
-            "benefits": [
-              "Section structurée pour un contenu cohérent",
-              "Personnalisation facile",
-              "Mise en valeur de l'identité de votre marque"
-            ]
+            "details": {
+              "where_to_use": "Page d'accueil, page À propos, ou sections d'information.",
+              "why_use": "Utilisez ce bloc pour partager l'histoire de votre marque, vos valeurs et votre mission.",
+              "benefits": [
+                "Renforce la confiance des clients",
+                "Facilite la connexion avec les visiteurs",
+                "Améliore l'image de marque"
+              ]
+            }
           }
         ]
       }

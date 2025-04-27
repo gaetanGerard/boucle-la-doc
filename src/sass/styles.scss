@@ -3,13 +3,19 @@
 # This file centralizes the import of all other SCSS files
 # Nothing should be added here as its should only use to serve as an "css endpoint" for all files
 --------------------------------------------------------------*/
-@use "reset";
-@use "index" as *;
+@use 'reset';
+@use 'index' as *;
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
