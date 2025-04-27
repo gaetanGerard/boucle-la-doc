@@ -1,6 +1,6 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use 'variables' as *;
+@use 'mixins' as *;
 
-body {
+.body_layout {
   font-family: $main_font;
 }
