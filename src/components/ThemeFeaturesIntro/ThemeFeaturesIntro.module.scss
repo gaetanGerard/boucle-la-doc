@@ -1,4 +1,4 @@
-@use "@/sass" as *;
+@use '@/sass' as *;
 
 .content {
   display: flex;
@@ -15,7 +15,7 @@
   gap: 1.5rem;
 
   .description {
-    @include home_text;
+    @include text;
   }
 
   .cta {

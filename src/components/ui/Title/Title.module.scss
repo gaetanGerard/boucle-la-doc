@@ -1,4 +1,4 @@
-@use "@/sass" as *;
+@use '@/sass' as *;
 
 .h1 {
   font-size: $font_size_2xl;
@@ -89,5 +89,13 @@
 
   @media (min-width: 768px) {
     font-size: $font_size_2xl;
+  }
+}
+
+.link {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $secondary_color;
+    text-decoration: underline;
   }
 }

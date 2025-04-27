@@ -1,6 +1,5 @@
 {
   "prerequisites": {
-    "title": "Prérequis",
     "navItem": {
       "label": "Prérequis",
       "slug": "prerequisites"
@@ -11,34 +10,47 @@
           "label": "Prérequis",
           "slug": "prerequisites-requirements"
         },
-        "title": "Prérequis",
-        "description": "Pour développer et exécuter ce thème WordPress, assurez-vous de disposer des éléments suivants :",
-        "items": [
-          "Un environnement de développement local (MAMP, WAMP, Local by Flywheel)",
-          "Installation de WordPress (version 6.8 ou supérieure)",
-          "Connaissances de base en HTML, CSS, PHP et Sass",
-          "Éditeur de code (ex : Visual Studio Code)",
-          "Navigateur moderne (Chrome, Firefox, etc.)"
-        ]
+        "title": {
+          "name": "Prérequis",
+          "anchor": "prerequisites-requirements",
+          "level": 2
+        },
+        "description": "Avant de commencer à utiliser ce thème WordPress, il est essentiel de vous assurer que votre environnement de développement est correctement configuré. Cela garantira une expérience de développement fluide et sans accroc. Vous aurez besoin d'un ensemble d'outils et de compétences de base qui sont nécessaires non seulement pour faire fonctionner ce thème, mais aussi pour vous permettre de personnaliser et étendre ses fonctionnalités de manière efficace.",
+        "list": {
+          "list_desc": "Pour développer et exécuter ce thème WordPress, assurez-vous de disposer des éléments suivants :",
+          "items": [
+            "Un environnement de développement local (MAMP, WAMP, Local by Flywheel)",
+            "Installation de WordPress (version 6.8 ou supérieure)",
+            "Connaissances de base en HTML, CSS, PHP et Sass",
+            "Éditeur de code (ex : Visual Studio Code)",
+            "Navigateur moderne (Chrome, Firefox, etc.)"
+          ]
+        }
       },
       {
         "navItem": {
           "label": "Compatibilité",
           "slug": "prerequisites-compatibility"
         },
-        "title": "Compatibilité",
-        "description": "Ce thème est compatible avec les versions minimales suivantes :",
-        "items": [
-          "WordPress : 6.8",
-          "PHP : 7.4 ou supérieur",
-          "MySQL : 5.7 ou supérieur",
-          "Sass : 1.32 ou supérieur"
-        ]
+        "title": {
+          "name": "Compatibilité",
+          "anchor": "prerequisites-compatibility",
+          "level": 2
+        },
+        "description": "La compatibilité avec les outils et technologies suivantes est essentielle pour garantir le bon fonctionnement et la stabilité de ce thème WordPress. Cette section fournit les exigences minimales pour les différentes technologies que le thème utilise, ainsi que les versions compatibles de WordPress, WooCommerce, PHP et MySQL. Assurez-vous de vérifier que votre environnement respecte ces critères afin d'éviter des problèmes de compatibilité ou de performance. Si votre configuration actuelle ne répond pas à ces exigences, il est fortement recommandé de mettre à jour vos outils avant de commencer à utiliser ce thème.",
+        "list": {
+          "list_desc": "Ce thème est conçu pour être compatible avec les dernières versions de WordPress et WooCommerce.",
+          "items": [
+            "WordPress : 6.8 ou supérieur",
+            "WooCommerce : 8.0 ou supérieur",
+            "PHP : 7.4 ou supérieur",
+            "MySQL : 5.7 ou supérieur"
+          ]
+        }
       }
     ]
   },
   "plugins": {
-    "title": "Plugins nécessaires et recommandés",
     "navItem": {
       "label": "Plugins",
       "slug": "plugins"
@@ -49,10 +61,18 @@
           "label": "Plugins nécessaires",
           "slug": "plugins-required"
         },
-        "title": "Plugins nécessaires",
+        "title": {
+          "name": "Plugins nécessaires",
+          "anchor": "plugins-required",
+          "level": 2
+        },
         "plugins": [
           {
-            "name": "WooCommerce",
+            "title": {
+              "name": "WooCommerce",
+              "anchor": "woocommerce",
+              "level": 3
+            },
             "description": "WooCommerce est la solution e-commerce WordPress la plus populaire pour créer une boutique en ligne facilement.",
             "logo": "https://woocommerce.com/wp-content/themes/woo/images/logos/woocommerce-logo.png",
             "link": "https://woocommerce.com/",
@@ -65,7 +85,11 @@
             "alternative": null
           },
           {
-            "name": "Stripe for WooCommerce",
+            "title": {
+              "name": "Stripe for WooCommerce",
+              "anchor": "stripe",
+              "level": 3
+            },
             "description": "Permet d'intégrer rapidement le paiement par carte bancaire via Stripe dans votre boutique WooCommerce.",
             "logo": "https://woocommerce.com/wp-content/uploads/2020/10/stripe-logo.png",
             "link": "https://woocommerce.com/products/stripe/",
@@ -87,10 +111,18 @@
           "label": "Plugins recommandés",
           "slug": "plugins-recommended"
         },
-        "title": "Plugins recommandés",
+        "title": {
+          "name": "Plugins nécessaires et recommandés",
+          "id": "recommended-plugins",
+          "level": 2
+        },
         "plugins": [
           {
-            "name": "Loco Translate",
+            "title": {
+              "name": "Loco Translate",
+              "anchor": "plugin-loco-translate",
+              "level": 3
+            },
             "description": "Facilite la traduction des thèmes et plugins WordPress directement depuis l'administration.",
             "logo": "https://ps.w.org/loco-translate/assets/icon-256x256.png",
             "link": "https://fr.wordpress.org/plugins/loco-translate/",
@@ -99,7 +131,11 @@
             "alternative": null
           },
           {
-            "name": "Newsletter",
+            "title": {
+              "name": "Newsletter",
+              "anchor": "plugin-newsletter",
+              "level": 3
+            },
             "description": "Créez et gérez vos campagnes d'emailing directement depuis WordPress.",
             "logo": "https://ps.w.org/newsletter/assets/icon-256x256.png",
             "link": "https://fr.wordpress.org/plugins/newsletter/",
@@ -108,7 +144,11 @@
             "alternative": null
           },
           {
-            "name": "Forminator",
+            "title": {
+              "name": "Forminator",
+              "anchor": "plugin-forminator",
+              "level": 3
+            },
             "description": "Un constructeur de formulaires intuitif pour WordPress, avec des formulaires de contact, quiz et sondages.",
             "logo": "https://ps.w.org/forminator/assets/icon-256x256.png",
             "link": "https://fr.wordpress.org/plugins/forminator/",
@@ -123,7 +163,11 @@
             }
           },
           {
-            "name": "miniOrange Social Login and Sharing",
+            "title": {
+              "name": "miniOrange Social Login and Sharing",
+              "anchor": "plugin-miniorange-social-login",
+              "level": 3
+            },
             "description": "Ajoute la possibilité de se connecter avec Facebook, Google, Twitter et d'autres comptes sociaux.",
             "logo": "https://ps.w.org/miniorange-login-openid/assets/icon-256x256.png",
             "link": "https://fr.wordpress.org/plugins/miniorange-login-openid/",
@@ -135,6 +179,11 @@
             "alternative": null
           },
           {
+            "title": {
+              "name": "Font Awesome",
+              "anchor": "plugin-font-awesome",
+              "level": 3
+            },
             "name": "Font Awesome",
             "description": "Ajoute facilement des icônes vectorielles FontAwesome dans votre thème WordPress.",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/Font_Awesome_5_logo.svg",
@@ -148,7 +197,6 @@
     ]
   },
   "installation": {
-    "title": "Installation et Configuration",
     "navItem": {
       "label": "Installation",
       "slug": "installation"
@@ -159,7 +207,11 @@
           "label": "Installer WordPress",
           "slug": "installation-wordpress"
         },
-        "title": "Installer WordPress",
+        "title": {
+          "name": "Installer WordPress",
+          "anchor": "installation-wordpress",
+          "level": 2
+        },
         "description": "Avant de commencer l'installation du thème, vous devez avoir un site WordPress fonctionnel. Selon votre environnement de développement, vous avez plusieurs options :",
         "methods": [
           {
@@ -179,7 +231,11 @@
           "label": "Téléchagement du Thème",
           "slug": "installation-upload-theme"
         },
-        "title": "Téléchargement et Upload du Thème",
+        "title": {
+          "name": "Téléchargement et Upload du Thème",
+          "anchor": "installation-upload-theme",
+          "level": 2
+        },
         "description": "Après avoir configuré votre site WordPress, vous pouvez installer le thème.",
         "steps": [
           {
@@ -217,7 +273,11 @@
           "label": "Configuration du thème",
           "slug": "installation-theme-configuration"
         },
-        "title": "Configuration de Base du Thème",
+        "title": {
+          "name": "Configuration de Base du Thème",
+          "anchor": "installation-theme-configuration",
+          "level": 2
+        },
         "description": "Après activation du thème, suivez ces étapes pour une configuration optimale.",
         "steps": [
           {
@@ -242,7 +302,11 @@
           "label": "Menus, Widgets Configuration",
           "slug": "installation-menus-pages-widgets"
         },
-        "title": "Configuration des Menus, Pages et Widgets",
+        "title": {
+          "name": "Configuration des Menus, Pages et Widgets",
+          "anchor": "installation-menus-pages-widgets",
+          "level": 2
+        },
         "description": "Après l'activation du thème, suivez ces étapes de configuration :\n\n**Menus** :\n- Rendez-vous dans Apparence > Menus.\n- Créez votre menu principal et assignez-le à l'emplacement prévu par le thème (`header_menu` ou similaire).\n\n**Pages** :\n- Créez les pages de base : Accueil, Boutique, Panier, Commande, Mon Compte.\n- Associez la page d'accueil dans Réglages > Lecture > Afficher une page statique.\n- Pour WooCommerce, attribuez correctement les pages via WooCommerce > Réglages > Avancé.\n\n**Widgets** :\n- Rendez-vous dans Apparence > Widgets.\n- Ajoutez les widgets nécessaires dans les zones prévues : Sidebar, Footer, etc.\n\n**Tips** :\n- Le thème peut proposer des emplacements de widgets spécifiques, adaptés à WooCommerce.\n- Pensez à utiliser des extensions comme \"Widget Importer & Exporter\" pour sauvegarder votre configuration si besoin."
       },
       {
@@ -250,13 +314,16 @@
           "label": "Plugins Configuration",
           "slug": "installation-plugin-configuration"
         },
-        "title": "Configuration Initiale des Plugins",
+        "title": {
+          "name": "Configuration Initiale des Plugins",
+          "anchor": "installation-plugin-configuration",
+          "level": 2
+        },
         "description": "Après avoir installé les plugins recommandés :\n\n- **WooCommerce** : Suivez l'assistant d'installation, configurez les paiements, les livraisons et la boutique.\n- **Stripe** : Configurez les clés API pour activer les paiements par carte bancaire.\n- **Newsletter, Forminator, Social Login** : Reportez-vous à la documentation officielle de chaque plugin.\n\n**Tips** :\n- Respectez les versions minimum indiquées.\n- Testez les formulaires et processus d'achat pour valider le bon fonctionnement."
       }
     ]
   },
   "developerGuide": {
-    "title": "Guide Technique / Développeur",
     "navItem": {
       "label": "Guide Développeur",
       "slug": "developer-guide"
@@ -267,7 +334,11 @@
           "label": "Structure du Thème",
           "slug": "developer-structure"
         },
-        "title": "Structure du Thème",
+        "title": {
+          "name": "Structure du Thème",
+          "anchor": "developer-structure",
+          "level": 2
+        },
         "description": "Le thème suit la structure standard WordPress avec quelques ajouts pour WooCommerce et des personnalisations spécifiques.",
         "fileTree": [
           {
@@ -312,15 +383,23 @@
           "label": "Interactivité",
           "slug": "developer-interactivity"
         },
-        "title": "Interactivité",
+        "title": {
+          "name": "Interactivité",
+          "anchor": "developer-interactivity",
+          "level": 2
+        },
         "description": "L'interactivité du thème est principalement gérée avec jQuery pour des opérations légères comme le menu mobile, les animations de formulaire, ou l'affichage dynamique de certains éléments. Un usage minimal de JavaScript vanilla est également présent pour améliorer la performance."
       },
       {
         "navItem": {
           "label": "PHP et WordPress",
-          "slug": "developer-php"
+          "slug": "developer-"
         },
-        "title": "PHP et WordPress",
+        "title": {
+          "name": "PHP et WordPress",
+          "anchor": "developer-php",
+          "level": 2
+        },
         "description": "Le thème utilise les bonnes pratiques de développement WordPress en PHP :\n- Utilisation de fonctions natives WordPress\n- Sécurisation des données (esc_html, esc_url, wp_nonce)\n- Respect de la hiérarchie des templates\n- Personnalisation WooCommerce via des templates override."
       },
       {
@@ -328,15 +407,23 @@
           "label": "Styles et SCSS",
           "slug": "developer-scss"
         },
-        "title": "Styles et SCSS",
+        "title": {
+          "name": "Styles et SCSS",
+          "anchor": "developer-scss",
+          "level": 2
+        },
         "description": "Le style est structuré à l'aide de SCSS pour faciliter la modularité et la maintenance du code. Un fichier principal `style.scss` importe tous les modules nécessaires (variables, mixins, bases, layouts, components)."
       },
       {
         "navItem": {
-          "label": "Hooks et Filtres",
+          "label": "Hooks et Filtres Personnalisés",
           "slug": "developer-hooks-filters"
         },
-        "title": "Hooks et Filtres Personnalisés",
+        "title": {
+          "name": "Styles et SCSS",
+          "anchor": "developer-hooks-filters",
+          "level": 2
+        },
         "description": "Le thème propose quelques hooks et filtres personnalisés pour permettre une extensibilité facile. Voici des exemples génériques :",
         "customHooks": [
           {
@@ -359,7 +446,6 @@
     ]
   },
   "blocks_and_compositions": {
-    "title": "Blocs de Composition et Composants Exclusifs",
     "navItem": {
       "label": "Blocs & Composants",
       "slug": "blocks-and-compositions"
@@ -370,7 +456,11 @@
           "label": "Fonctionnalité unique",
           "slug": "unique-features"
         },
-        "title": "Fonctionnalité unique",
+        "title": {
+          "name": "Fonctionnalité unique",
+          "anchor": "unique-features",
+          "level": 2
+        },
         "description": "Cette section présente les fonctionnalités uniques du thème, qui ne sont pas disponibles dans d'autres thèmes WordPress et ont été développer uniquement pour se thème.",
         "children": [
           {
@@ -378,7 +468,11 @@
               "label": "Carte Cadeau",
               "slug": "gift-card"
             },
-            "title": "Carte Cadeau",
+            "title": {
+              "name": "Carte Cadeau",
+              "anchor": "gift-card",
+              "level": 3
+            },
             "image": "/images/compositions/gift-card.png",
             "description": "Le bloc Carte Cadeau permet aux utilisateurs de créer et d'offrir des cartes cadeaux pour leur boutique WooCommerce.",
             "where_to_use": "Page d'accueil, page produit, ou lors de promotions spéciales.",
@@ -395,7 +489,11 @@
               "label": "Panier Asynchrone",
               "slug": "async-cart"
             },
-            "title": "Panier Asynchrone",
+            "title": {
+              "name": "Panier Asynchrone",
+              "anchor": "async-cart",
+              "level": 3
+            },
             "image": "/images/compositions/async-cart.png",
             "description": "Le panier asynchrone permet aux utilisateurs de mettre à jour leur panier sans recharger la page.",
             "where_to_use": "Page produit, page panier, lors de l'ajout d'articles au panier.",
@@ -411,7 +509,11 @@
               "label": "Compte Utilisateur",
               "slug": "user-account-page"
             },
-            "title": "Page de Compte Utilisateur",
+            "title": {
+              "name": "Page de Compte Utilisateur",
+              "anchor": "user-account-page",
+              "level": 3
+            },
             "description": "La page de compte utilisateur permet à chaque client de gérer ses informations personnelles, ses commandes passées et ses préférences.",
             "details": "Les utilisateurs peuvent se connecter pour consulter leur historique de commandes, gérer leurs informations de paiement et leurs adresses de livraison.",
             "benefits": [
@@ -425,7 +527,11 @@
               "label": "Suivi des Commandes",
               "slug": "order-tracking"
             },
-            "title": "Suivi des Commandes",
+            "title": {
+              "name": "Suivi des Commandes",
+              "anchor": "order-tracking",
+              "level": 3
+            },
             "description": "Le suivi des commandes permet aux utilisateurs de suivre l'état de leurs commandes directement depuis leur compte.",
             "details": "Chaque commande affiche un statut, des détails sur les produits achetés, ainsi qu'un lien vers les informations de livraison.",
             "benefits": [
@@ -439,7 +545,11 @@
               "label": "Gestion Livraison",
               "slug": "shipping-addresses"
             },
-            "title": "Gestion des Adresses de Livraison",
+            "title": {
+              "name": "Gestion des Adresses de Livraison",
+              "anchor": "shipping-addresses",
+              "level": 3
+            },
             "description": "Les utilisateurs peuvent gérer plusieurs adresses de livraison et choisir celle qu'ils préfèrent pour chaque commande.",
             "details": "Cette fonctionnalité simplifie le processus de commande pour les clients récurrents et leur permet de s'assurer que leurs produits sont envoyés à la bonne adresse.",
             "benefits": [
@@ -453,7 +563,11 @@
               "label": "Historique des Commandes",
               "slug": "order-history"
             },
-            "title": "Historique des Commandes",
+            "title": {
+              "name": "Historique des Commandes",
+              "anchor": "order-history",
+              "level": 3
+            },
             "description": "Les utilisateurs peuvent consulter l'historique de leurs commandes passées, y compris les détails des produits et les statuts.",
             "details": "Cette fonctionnalité permet aux clients de garder une trace de leurs achats et de gérer facilement les retours ou échanges.",
             "benefits": [
@@ -469,7 +583,11 @@
           "label": "Blocs de Compositions",
           "slug": "user-features"
         },
-        "title": "Blocs de Compositions",
+        "title": {
+          "name": "Blocs de Compositions",
+          "anchor": "user-features",
+          "level": 2
+        },
         "description": "Cette section couvre l'ensemble des blocs et fonctionnalités uniques disponibles dans le thème, facilitant la création d'expériences personnalisées.",
         "children": [
           {
@@ -477,7 +595,11 @@
               "label": "Hero HighImpact",
               "slug": "hero-highimpact"
             },
-            "title": "Hero HighImpact",
+            "title": {
+              "name": "Hero HighImpact",
+              "anchor": "hero-highimpact",
+              "level": 3
+            },
             "image": "/images/compositions/hero-highimpact.png",
             "description": "Le bloc Hero HighImpact est une section visuellement percutante, idéale pour présenter les éléments clés de votre site.",
             "why_use": "Ce bloc est conçu pour attirer l'attention avec des visuels grands et engageants. Il permet de mettre en valeur des informations importantes telles que des promotions ou des événements.",
@@ -492,7 +614,11 @@
               "label": "Hero LowImpact",
               "slug": "hero-lowimpact"
             },
-            "title": "Hero LowImpact",
+            "title": {
+              "name": "Hero LowImpact",
+              "anchor": "hero-lowimpact",
+              "level": 3
+            },
             "image": "/images/compositions/hero-lowimpact.png",
             "description": "Le bloc Hero LowImpact offre un design plus subtil mais élégant, idéal pour les messages moins intrusifs.",
             "why_use": "Utilisez ce bloc lorsque vous voulez que l'accent soit mis sur des informations importantes, sans être trop intrusif.",
@@ -507,7 +633,11 @@
               "label": "About Section",
               "slug": "about-section"
             },
-            "title": "About Section",
+            "title": {
+              "name": "About Section",
+              "anchor": "about-section",
+              "level": 3
+            },
             "image": "/images/compositions/about-section.png",
             "description": "Le bloc About Section est conçu pour présenter des informations sur votre entreprise ou votre mission.",
             "why_use": "Ce bloc est idéal pour fournir des informations claires et structurées sur ce que fait votre entreprise et ce qui la distingue.",
@@ -522,7 +652,6 @@
     ]
   },
   "maintenance": {
-    "title": "Maintenance et Roadmap",
     "navItem": {
       "label": "Maintenance & Roadmap",
       "slug": "maintenance"
@@ -533,7 +662,11 @@
           "label": "Roadmap",
           "slug": "roadmap"
         },
-        "title": "Roadmap",
+        "title": {
+          "name": "Roadmap",
+          "anchor": "roadmap",
+          "level": 2
+        },
         "description": "Cette section présente les ajouts et améliorations futures du thème, ainsi que les corrections de bugs prévues. Elle vous permet de suivre les évolutions du projet et de savoir à quoi vous attendre dans les prochaines versions.",
         "roadmap_items": [
           {
@@ -573,7 +706,11 @@
           "label": "Changelog",
           "slug": "changelog"
         },
-        "title": "Changelog",
+        "title": {
+          "name": "Changelog",
+          "anchor": "changelog",
+          "level": 2
+        },
         "entries": [
           {
             "version": "1.0.0",

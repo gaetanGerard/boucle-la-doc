@@ -20,24 +20,42 @@ const Documentation = ({ slug }) => {
     setSideNav(navLinks);
 
     if (slug && docData) {
-      const docDataFromSlug = findDataBySlug(slug, docData);
-      setData(docDataFromSlug);
+      if (slug.length > 1) {
+        const docDataFromSlug = findDataBySlug(slug, docData);
+        setData(docDataFromSlug);
+      } else if (slug.length === 1 && slug[0] === "documentation") {
+        const dataInit = {
+          layout: "initLayout",
+          title: {
+            name: "Documentation",
+            level: 1,
+            anchor: "documentation",
+          },
+          description: "Vous trouverez ici la documentation sur le projet.",
+          image: {
+            src: "/img/documentation.png",
+            width: 600,
+            height: 600,
+            className: "image_center"
+          }
+        }
+        setData(dataInit);
+      }
+
     }
   }, [slug]);
 
-  if (data) {
-    return (
-      <main className={styles.container}>
-        <RenderSideNav nav={sideNav} />
-        <DocContent data={data} />
-        <BackToTop />
-      </main>
-    );
-  } else {
-    return (
-      <main className={styles.container}><Loading /></main>
-    )
-  }
+  console.log(slug)
+
+  console.log(data);
+
+  return (
+    <main className={styles.container}>
+      <RenderSideNav nav={sideNav} />
+      {data ? (<div className={styles.doc_wrapper}><DocContent data={data} /></div>) : <Loading />}
+      <BackToTop />
+    </main>
+  );
 
 };
 
