@@ -17,8 +17,6 @@ import Roadmap from "@/components/Roadmap/Roadmap";
 import Changelog from "@/components/Changelog/Changelog";
 
 const DocContent = ({ data }) => {
-    // console.log(data);
-
     return (
         <div className={clsx(styles.container, { [styles[data.layout]]: data.layout })}>
             {/* This part handle the General section */}

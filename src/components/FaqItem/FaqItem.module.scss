@@ -1,0 +1,59 @@
+@use '@/sass' as *;
+
+.faqItem {
+  background-color: $white;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba($dark_color, 0.1);
+  overflow: hidden;
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $title_color;
+}
+
+.faqTitle {
+  @include link;
+}
+
+.faqArrow {
+  font-size: 1.5rem;
+  color: $primary_color;
+}
+
+.faqBody {
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.faqSubtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.faqLink {
+  font-size: 1rem;
+  color: $primary_color;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

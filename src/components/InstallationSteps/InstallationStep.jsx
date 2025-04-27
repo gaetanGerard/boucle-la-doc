@@ -9,9 +9,6 @@ import UnorderedList from '@/components/ui/UnorderedList/UnorderedList'
 
 const InstallationStep = ({ step }) => {
     const { title, description, link, tips, image, list } = step
-
-    console.log(tips)
-
     return (
         <div className={styles.card} id={title.anchor}>
             <div className={styles.content}>

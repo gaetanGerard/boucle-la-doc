@@ -7,8 +7,6 @@ import Link from 'next/link';
 const Code = ({ codeData }) => {
     const { code, language, title, description } = codeData;
 
-    console.log(title)
-
     return (
         <div className={styles.codeBlock} id={title.anchor}>
             {title && <Link href={`#${title.anchor}`}><Title level={title.level} className="subheading_link">{title.name}</Title></Link>}

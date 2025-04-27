@@ -11,8 +11,6 @@ import Chip from "@/components/ui/Chip/Chip";
 
 const Plugin = ({ plugin }) => {
     const { list, logo, alternative, description, link, title, version, compatibility } = plugin;
-
-    console.log(plugin)
     return (
         <div className={styles.container} id={title.anchor}>
             <div className={styles.plugin_header}>
