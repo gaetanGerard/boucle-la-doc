@@ -700,24 +700,88 @@
         "description": "Le thème suit la structure standard WordPress avec quelques ajouts pour WooCommerce et des personnalisations spécifiques.",
         "fileTree": [
           {
-            "name": "theme-name/",
+            "name": "bo_theme/",
             "children": [
               {
                 "name": "assets/",
-                "children": [
-                  { "name": "css/" },
-                  { "name": "js/" },
-                  { "name": "images/" },
-                  { "name": "fonts/" }
-                ]
+                "children": [{ "name": "fonts/" }]
               },
               {
                 "name": "woocommerce/",
                 "children": [
-                  { "name": "cart/" },
-                  { "name": "checkout/" },
-                  { "name": "myaccount/" },
-                  { "name": "product/" }
+                  {
+                    "name": "checkout/",
+                    "children": [
+                      { "name": "form-billing.php" },
+                      { "name": "form-checkout.php" },
+                      { "name": "form-login.php" },
+                      { "name": "form-shipping.php" },
+                      { "name": "order-received.php" },
+                      { "name": "thankyou.php" }
+                    ]
+                  },
+                  {
+                    "name": "myaccount/",
+                    "children": [
+                      { "name": "dashboard.php" },
+                      { "name": "form-add-payment-method.php" },
+                      { "name": "form-edit-account.php" },
+                      { "name": "form-edit-address.php" },
+                      { "name": "form-login.php" },
+                      { "name": "form-lost-password.php" },
+                      { "name": "form-reset-password.php" },
+                      { "name": "my-account.php" },
+                      { "name": "my-address.php" },
+                      { "name": "my-orders.php" },
+                      { "name": "navigation.php" },
+                      { "name": "orders.php" },
+                      { "name": "payment-methods.php" },
+                      { "name": "view-order.php" }
+                    ]
+                  },
+                  {
+                    "name": "single-product/",
+                    "children": [
+                      { "name": "add-to-cart/", "children": [{ "name": "simple.php" }] },
+                      { "name": "tabs/", "children": [{ "name": "tabs.php" }] }
+                    ]
+                  },
+                  { "name": "emails/", "children": [{ "name": "email-gift-card.php" }] },
+                  {
+                    "name": "order/",
+                    "children": [
+                      { "name": "order-detail.php" },
+                      { "name": "order-details-item.php" }
+                    ]
+                  },
+                  {
+                    "name": "auth/",
+                    "children": [
+                      { "name": "register.php" },
+                      { "name": "form-login.php" },
+                      {
+                        "name": "register-step/",
+                        "children": [
+                          { "name": "register-step-1.php" },
+                          { "name": "register-step-2.php" },
+                          { "name": "register-step-3.php" }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "gift-card/",
+                    "children": [
+                      { "name": "gift-card-admin.php" },
+                      { "name": "gift-card-functions.php" },
+                      { "name": "gift-card-product.php" }
+                    ]
+                  },
+                  { "name": "archive-product.php" },
+                  { "name": "content-product.php" },
+                  { "name": "content-single-product.php" },
+                  { "name": "single-product.php" },
+                  { "name": "single-product-gift-card.php" }
                 ]
               },
               {
@@ -726,6 +790,50 @@
                   { "name": "header.php" },
                   { "name": "footer.php" },
                   { "name": "sidebar.php" }
+                ]
+              },
+              {
+                "name": "inc/",
+                "children": [
+                  { "name": "customizer.php" },
+                  { "name": "custom-header.php" },
+                  { "name": "gift-card.php" }
+                ]
+              },
+              {
+                "name": "js/",
+                "children": [{ "name": "customizer.js" }, { "name": "navigation.js" }]
+              },
+              {
+                "name": "partials/",
+                "children": [{ "name": "cart-panel-body.php" }]
+              },
+              {
+                "name": "sass/",
+                "children": [
+                  {
+                    "name": "abstracts/",
+                    "children": [{ "name": "_variables.scss" }, { "name": "_mixins.scss" }]
+                  },
+                  {
+                    "name": "base/",
+                    "children": [{ "name": "_reset.scss" }, { "name": "_typography.scss" }]
+                  },
+                  {
+                    "name": "components/",
+                    "children": [{ "name": "_buttons.scss" }, { "name": "_forms.scss" }]
+                  },
+                  {
+                    "name": "layouts/",
+                    "children": [{ "name": "_header.scss" }, { "name": "_footer.scss" }]
+                  },
+                  {
+                    "name": "pages/",
+                    "children": [{ "name": "_home.scss" }, { "name": "_product.scss" }]
+                  },
+                  { "name": "auth.scss" },
+                  { "name": "style.scss" },
+                  { "name": "woocommerce.scss" }
                 ]
               },
               { "name": "functions.php" },

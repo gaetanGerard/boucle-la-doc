@@ -10,6 +10,7 @@ import UnorderedList from "@/components/ui/UnorderedList/UnorderedList";
 import Plugins from "@/components/Plugins/Plugins";
 import Installation from "@/components/Installation/Installation";
 import InstallationSteps from "@/components/InstallationSteps/InstallationSteps";
+import FileTree from "@/components/FileTree/FileTree";
 
 const DocContent = ({ data }) => {
     // console.log(data);
@@ -27,6 +28,7 @@ const DocContent = ({ data }) => {
             {data.plugins && <Plugins plugins={data.plugins} />}
             {data.installation && <Installation inst={data.installation} />}
             {data.steps && <InstallationSteps steps={data.steps} />}
+            {data.fileTree && <FileTree data={data.fileTree} />}
         </div >
     );
 };
