@@ -46,11 +46,14 @@ const Documentation = ({ slug }) => {
   }, [slug]);
 
   return (
-    <main className={styles.container}>
-      <RenderSideNav nav={sideNav} />
-      {data ? (<div className={styles.doc_wrapper}><DocContent data={data} /></div>) : <Loading />}
+    <>
+      <main className={styles.container}>
+        <RenderSideNav nav={sideNav} />
+        {data ? (<div className={styles.doc_wrapper}><DocContent data={data} /></div>) : <Loading />}
+      </main>
       <BackToTop />
-    </main>
+    </>
+
   );
 
 };

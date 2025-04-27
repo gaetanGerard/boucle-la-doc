@@ -387,16 +387,38 @@
           "level": 2
         },
         "description": "Avant de commencer l'installation du thème, vous devez avoir un site WordPress fonctionnel. Selon votre environnement de développement, vous avez plusieurs options :",
-        "methods": [
+        "installation": [
           {
-            "title": "Installation sur un serveur local",
+            "title": {
+              "name": "Installation sur un serveur local",
+              "anchor": "installation-local-server",
+              "level": 3
+            },
+            "logo": {
+              "src": "/img/logo/wamp-logo.png",
+              "width": 300,
+              "height": 300,
+              "alt": "Wamp Server Logo",
+              "className": "image_center"
+            },
             "description": "Utilisez des outils comme MAMP, WAMP ou Local by Flywheel pour installer WordPress en local.",
-            "documentationLink": "https://fr.wordpress.org/support/article/how-to-install-wordpress/"
+            "link": "https://www.tutowp.fr/comment-installer-wordpress/comment-installer-wordpress-en-local-avec-wamp/"
           },
           {
-            "title": "Installation via conteneur (Docker)",
+            "title": {
+              "name": "Installation via conteneur (Docker)",
+              "anchor": "installation-docker",
+              "level": 3
+            },
+            "logo": {
+              "src": "/img/logo/docker-logo.png",
+              "width": 300,
+              "height": 300,
+              "alt": "Docker Logo",
+              "className": "image_center"
+            },
             "description": "Utilisez Docker pour configurer un environnement WordPress complet, incluant la base de données et les dépendances.",
-            "documentationLink": "https://developer.wordpress.org/advanced-administration/docker/"
+            "link": "https://www.hostinger.com/fr/tutoriels/docker-wordpress"
           }
         ]
       },
@@ -435,12 +457,12 @@
           {
             "title": "Compatibilité avec votre système d'exploitation",
             "description": "L'installation est similaire sur Windows, macOS et Linux. Assurez-vous simplement que les chemins d'accès ne posent pas de problème lors du transfert FTP."
+          },
+          {
+            "title": "Activation du thème",
+            "description": "Une fois installé, activez le thème via Apparence > Thèmes > Activer."
           }
-        ],
-        "finalStep": {
-          "title": "Activation du thème",
-          "description": "Une fois installé, activez le thème via Apparence > Thèmes > Activer."
-        }
+        ]
       },
       {
         "navItem": {
