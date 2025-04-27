@@ -14,9 +14,11 @@ const SideNav = ({ nav, mobile }) => {
 
         const traverse = (nodes) => {
             nodes.forEach((node) => {
+                // Vérifier si le path inclut l'URL du lien de l'élément
                 if (path.includes(node.href)) {
                     open[node.href] = true;
                 }
+                // Si l'élément a des enfants, on les traverse également
                 if (node.children && node.children.length > 0) {
                     traverse(node.children);
                 }
@@ -41,7 +43,6 @@ const SideNav = ({ nav, mobile }) => {
         }));
     };
 
-
     const renderNavItems = (items, level = 1) => {
         return items.map((item, index) => {
             const hasChildren = item.children && item.children.length > 0;
@@ -65,7 +66,7 @@ const SideNav = ({ nav, mobile }) => {
                                 )}
                             </button>
                         ) : (
-                            <>
+                            <div className={styles.subNavRow}>
                                 <Link href={item.href} className={clsx(styles.navLink, { [styles.active]: pathname === item.href })}>
                                     {item.label}
                                 </Link>
@@ -82,7 +83,7 @@ const SideNav = ({ nav, mobile }) => {
                                         />
                                     </button>
                                 )}
-                            </>
+                            </div>
                         )}
                     </div>
 
@@ -98,7 +99,7 @@ const SideNav = ({ nav, mobile }) => {
 
     return (
         <nav className={`${mobile === true ? styles.sideNavMobile : styles.sideNav}`}>
-            <ul className={`${styles.navList} `}>{renderNavItems(nav)}</ul>
+            <ul className={styles.navList}>{renderNavItems(nav)}</ul>
         </nav>
     );
 };

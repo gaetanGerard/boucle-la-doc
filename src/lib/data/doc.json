@@ -1,14 +1,17 @@
 {
   "prerequisites": {
     "title": "Prérequis",
-    "link": {
+    "navItem": {
       "label": "Prérequis",
       "slug": "prerequisites"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Prérequis",
+          "slug": "prerequisites-requirements"
+        },
         "title": "Prérequis",
-        "slug": "prerequisites-requirements",
         "description": "Pour développer et exécuter ce thème WordPress, assurez-vous de disposer des éléments suivants :",
         "items": [
           "Un environnement de développement local (MAMP, WAMP, Local by Flywheel)",
@@ -19,8 +22,11 @@
         ]
       },
       {
+        "navItem": {
+          "label": "Compatibilité",
+          "slug": "prerequisites-compatibility"
+        },
         "title": "Compatibilité",
-        "slug": "prerequisites-compatibility",
         "description": "Ce thème est compatible avec les versions minimales suivantes :",
         "items": [
           "WordPress : 6.8",
@@ -33,14 +39,17 @@
   },
   "plugins": {
     "title": "Plugins nécessaires et recommandés",
-    "link": {
+    "navItem": {
       "label": "Plugins",
       "slug": "plugins"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Plugins nécessaires",
+          "slug": "plugins-required"
+        },
         "title": "Plugins nécessaires",
-        "slug": "plugins-required",
         "plugins": [
           {
             "name": "WooCommerce",
@@ -74,8 +83,11 @@
         ]
       },
       {
+        "navItem": {
+          "label": "Plugins recommandés",
+          "slug": "plugins-recommended"
+        },
         "title": "Plugins recommandés",
-        "slug": "plugins-recommended",
         "plugins": [
           {
             "name": "Loco Translate",
@@ -137,14 +149,17 @@
   },
   "installation": {
     "title": "Installation et Configuration",
-    "link": {
+    "navItem": {
       "label": "Installation",
       "slug": "installation"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Installer WordPress",
+          "slug": "installation-wordpress"
+        },
         "title": "Installer WordPress",
-        "slug": "installation-wordpress",
         "description": "Avant de commencer l'installation du thème, vous devez avoir un site WordPress fonctionnel. Selon votre environnement de développement, vous avez plusieurs options :",
         "methods": [
           {
@@ -160,8 +175,11 @@
         ]
       },
       {
+        "navItem": {
+          "label": "Téléchagement du Thème",
+          "slug": "installation-upload-theme"
+        },
         "title": "Téléchargement et Upload du Thème",
-        "slug": "installation-upload-theme",
         "description": "Après avoir configuré votre site WordPress, vous pouvez installer le thème.",
         "steps": [
           {
@@ -195,8 +213,11 @@
         }
       },
       {
+        "navItem": {
+          "label": "Configuration du thème",
+          "slug": "installation-theme-configuration"
+        },
         "title": "Configuration de Base du Thème",
-        "slug": "installation-theme-configuration",
         "description": "Après activation du thème, suivez ces étapes pour une configuration optimale.",
         "steps": [
           {
@@ -217,27 +238,36 @@
         ]
       },
       {
+        "navItem": {
+          "label": "Menus, Widgets Configuration",
+          "slug": "installation-menus-pages-widgets"
+        },
         "title": "Configuration des Menus, Pages et Widgets",
-        "slug": "installation-menus-pages-widgets",
         "description": "Après l'activation du thème, suivez ces étapes de configuration :\n\n**Menus** :\n- Rendez-vous dans Apparence > Menus.\n- Créez votre menu principal et assignez-le à l'emplacement prévu par le thème (`header_menu` ou similaire).\n\n**Pages** :\n- Créez les pages de base : Accueil, Boutique, Panier, Commande, Mon Compte.\n- Associez la page d'accueil dans Réglages > Lecture > Afficher une page statique.\n- Pour WooCommerce, attribuez correctement les pages via WooCommerce > Réglages > Avancé.\n\n**Widgets** :\n- Rendez-vous dans Apparence > Widgets.\n- Ajoutez les widgets nécessaires dans les zones prévues : Sidebar, Footer, etc.\n\n**Tips** :\n- Le thème peut proposer des emplacements de widgets spécifiques, adaptés à WooCommerce.\n- Pensez à utiliser des extensions comme \"Widget Importer & Exporter\" pour sauvegarder votre configuration si besoin."
       },
       {
+        "navItem": {
+          "label": "Plugins Configuration",
+          "slug": "installation-plugin-configuration"
+        },
         "title": "Configuration Initiale des Plugins",
-        "slug": "installation-plugin-configuration",
         "description": "Après avoir installé les plugins recommandés :\n\n- **WooCommerce** : Suivez l'assistant d'installation, configurez les paiements, les livraisons et la boutique.\n- **Stripe** : Configurez les clés API pour activer les paiements par carte bancaire.\n- **Newsletter, Forminator, Social Login** : Reportez-vous à la documentation officielle de chaque plugin.\n\n**Tips** :\n- Respectez les versions minimum indiquées.\n- Testez les formulaires et processus d'achat pour valider le bon fonctionnement."
       }
     ]
   },
   "developerGuide": {
     "title": "Guide Technique / Développeur",
-    "link": {
+    "navItem": {
       "label": "Guide Développeur",
       "slug": "developer-guide"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Structure du Thème",
+          "slug": "developer-structure"
+        },
         "title": "Structure du Thème",
-        "slug": "developer-structure",
         "description": "Le thème suit la structure standard WordPress avec quelques ajouts pour WooCommerce et des personnalisations spécifiques.",
         "fileTree": [
           {
@@ -278,23 +308,35 @@
         ]
       },
       {
+        "navItem": {
+          "label": "Interactivité",
+          "slug": "developer-interactivity"
+        },
         "title": "Interactivité",
-        "slug": "developer-interactivity",
         "description": "L'interactivité du thème est principalement gérée avec jQuery pour des opérations légères comme le menu mobile, les animations de formulaire, ou l'affichage dynamique de certains éléments. Un usage minimal de JavaScript vanilla est également présent pour améliorer la performance."
       },
       {
+        "navItem": {
+          "label": "PHP et WordPress",
+          "slug": "developer-php"
+        },
         "title": "PHP et WordPress",
-        "slug": "developer-php",
         "description": "Le thème utilise les bonnes pratiques de développement WordPress en PHP :\n- Utilisation de fonctions natives WordPress\n- Sécurisation des données (esc_html, esc_url, wp_nonce)\n- Respect de la hiérarchie des templates\n- Personnalisation WooCommerce via des templates override."
       },
       {
+        "navItem": {
+          "label": "Styles et SCSS",
+          "slug": "developer-scss"
+        },
         "title": "Styles et SCSS",
-        "slug": "developer-scss",
         "description": "Le style est structuré à l'aide de SCSS pour faciliter la modularité et la maintenance du code. Un fichier principal `style.scss` importe tous les modules nécessaires (variables, mixins, bases, layouts, components)."
       },
       {
+        "navItem": {
+          "label": "Hooks et Filtres",
+          "slug": "developer-hooks-filters"
+        },
         "title": "Hooks et Filtres Personnalisés",
-        "slug": "developer-hooks-filters",
         "description": "Le thème propose quelques hooks et filtres personnalisés pour permettre une extensibilité facile. Voici des exemples génériques :",
         "customHooks": [
           {
@@ -318,19 +360,25 @@
   },
   "blocks_and_compositions": {
     "title": "Blocs de Composition et Composants Exclusifs",
-    "link": {
+    "navItem": {
       "label": "Blocs & Composants",
       "slug": "blocks-and-compositions"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Fonctionnalité unique",
+          "slug": "unique-features"
+        },
         "title": "Fonctionnalité unique",
-        "slug": "unique-features",
         "description": "Cette section présente les fonctionnalités uniques du thème, qui ne sont pas disponibles dans d'autres thèmes WordPress et ont été développer uniquement pour se thème.",
-        "features": [
+        "children": [
           {
+            "navItem": {
+              "label": "Carte Cadeau",
+              "slug": "gift-card"
+            },
             "title": "Carte Cadeau",
-            "slug": "gift-card",
             "image": "/images/compositions/gift-card.png",
             "description": "Le bloc Carte Cadeau permet aux utilisateurs de créer et d'offrir des cartes cadeaux pour leur boutique WooCommerce.",
             "where_to_use": "Page d'accueil, page produit, ou lors de promotions spéciales.",
@@ -343,8 +391,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "Panier Asynchrone",
+              "slug": "async-cart"
+            },
             "title": "Panier Asynchrone",
-            "slug": "async-cart",
             "image": "/images/compositions/async-cart.png",
             "description": "Le panier asynchrone permet aux utilisateurs de mettre à jour leur panier sans recharger la page.",
             "where_to_use": "Page produit, page panier, lors de l'ajout d'articles au panier.",
@@ -354,17 +405,13 @@
               "Aucune interruption de l'expérience utilisateur",
               "Compatible avec tous les types de produits WooCommerce"
             ]
-          }
-        ]
-      },
-      {
-        "title": "Fonctionnalités Utilisateur",
-        "slug": "user-features",
-        "description": "Cette section décrit les fonctionnalités spécifiques du thème liées à l'expérience utilisateur, y compris la gestion des comptes, le suivi des commandes, et plus encore.",
-        "features": [
+          },
           {
+            "navItem": {
+              "label": "Compte Utilisateur",
+              "slug": "user-account-page"
+            },
             "title": "Page de Compte Utilisateur",
-            "slug": "user-account-page",
             "description": "La page de compte utilisateur permet à chaque client de gérer ses informations personnelles, ses commandes passées et ses préférences.",
             "details": "Les utilisateurs peuvent se connecter pour consulter leur historique de commandes, gérer leurs informations de paiement et leurs adresses de livraison.",
             "benefits": [
@@ -374,8 +421,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "Suivi des Commandes",
+              "slug": "order-tracking"
+            },
             "title": "Suivi des Commandes",
-            "slug": "order-tracking",
             "description": "Le suivi des commandes permet aux utilisateurs de suivre l'état de leurs commandes directement depuis leur compte.",
             "details": "Chaque commande affiche un statut, des détails sur les produits achetés, ainsi qu'un lien vers les informations de livraison.",
             "benefits": [
@@ -385,8 +435,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "Gestion Livraison",
+              "slug": "shipping-addresses"
+            },
             "title": "Gestion des Adresses de Livraison",
-            "slug": "shipping-addresses",
             "description": "Les utilisateurs peuvent gérer plusieurs adresses de livraison et choisir celle qu'ils préfèrent pour chaque commande.",
             "details": "Cette fonctionnalité simplifie le processus de commande pour les clients récurrents et leur permet de s'assurer que leurs produits sont envoyés à la bonne adresse.",
             "benefits": [
@@ -396,8 +449,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "Historique des Commandes",
+              "slug": "order-history"
+            },
             "title": "Historique des Commandes",
-            "slug": "order-history",
             "description": "Les utilisateurs peuvent consulter l'historique de leurs commandes passées, y compris les détails des produits et les statuts.",
             "details": "Cette fonctionnalité permet aux clients de garder une trace de leurs achats et de gérer facilement les retours ou échanges.",
             "benefits": [
@@ -409,13 +465,19 @@
         ]
       },
       {
-        "title": "Blocs de Composition",
-        "slug": "composition-blocks",
-        "description": "Cette section présente les différents blocs de composition disponibles dans le thème. Ces blocs sont pré-construits pour faciliter la création de pages sans avoir à recourir à des solutions personnalisées.",
-        "blocks": [
+        "navItem": {
+          "label": "Blocs de Compositions",
+          "slug": "user-features"
+        },
+        "title": "Blocs de Compositions",
+        "description": "Cette section couvre l'ensemble des blocs et fonctionnalités uniques disponibles dans le thème, facilitant la création d'expériences personnalisées.",
+        "children": [
           {
+            "navItem": {
+              "label": "Hero HighImpact",
+              "slug": "hero-highimpact"
+            },
             "title": "Hero HighImpact",
-            "slug": "hero-highimpact",
             "image": "/images/compositions/hero-highimpact.png",
             "description": "Le bloc Hero HighImpact est une section visuellement percutante, idéale pour présenter les éléments clés de votre site.",
             "why_use": "Ce bloc est conçu pour attirer l'attention avec des visuels grands et engageants. Il permet de mettre en valeur des informations importantes telles que des promotions ou des événements.",
@@ -426,8 +488,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "Hero LowImpact",
+              "slug": "hero-lowimpact"
+            },
             "title": "Hero LowImpact",
-            "slug": "hero-lowimpact",
             "image": "/images/compositions/hero-lowimpact.png",
             "description": "Le bloc Hero LowImpact offre un design plus subtil mais élégant, idéal pour les messages moins intrusifs.",
             "why_use": "Utilisez ce bloc lorsque vous voulez que l'accent soit mis sur des informations importantes, sans être trop intrusif.",
@@ -438,8 +503,11 @@
             ]
           },
           {
+            "navItem": {
+              "label": "About Section",
+              "slug": "about-section"
+            },
             "title": "About Section",
-            "slug": "about-section",
             "image": "/images/compositions/about-section.png",
             "description": "Le bloc About Section est conçu pour présenter des informations sur votre entreprise ou votre mission.",
             "why_use": "Ce bloc est idéal pour fournir des informations claires et structurées sur ce que fait votre entreprise et ce qui la distingue.",
@@ -455,14 +523,17 @@
   },
   "maintenance": {
     "title": "Maintenance et Roadmap",
-    "link": {
+    "navItem": {
       "label": "Maintenance & Roadmap",
       "slug": "maintenance"
     },
-    "sections": [
+    "children": [
       {
+        "navItem": {
+          "label": "Roadmap",
+          "slug": "roadmap"
+        },
         "title": "Roadmap",
-        "slug": "roadmap",
         "description": "Cette section présente les ajouts et améliorations futures du thème, ainsi que les corrections de bugs prévues. Elle vous permet de suivre les évolutions du projet et de savoir à quoi vous attendre dans les prochaines versions.",
         "roadmap_items": [
           {
@@ -498,11 +569,11 @@
         ]
       },
       {
-        "title": "Changelog",
-        "link": {
+        "navItem": {
           "label": "Changelog",
           "slug": "changelog"
         },
+        "title": "Changelog",
         "entries": [
           {
             "version": "1.0.0",

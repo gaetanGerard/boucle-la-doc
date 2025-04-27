@@ -36,6 +36,21 @@
   justify-content: space-between;
 }
 
+.subNavRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .navLink {
+    margin-right: auto;
+  }
+
+  button {
+    justify-content: end;
+  }
+}
+
 .toggleButton,
 .subToggleButton {
   background: none;
