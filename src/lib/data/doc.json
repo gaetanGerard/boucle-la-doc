@@ -435,31 +435,58 @@
         "description": "Après avoir configuré votre site WordPress, vous pouvez installer le thème.",
         "steps": [
           {
-            "title": "Téléchargement du thème",
+            "title": {
+              "name": "Téléchargement du thème",
+              "anchor": "theme-installation",
+              "level": 3
+            },
             "description": "Récupérez la dernière version du thème via le dépôt officiel.",
-            "repositoryLink": "https://github.com/ton-repo/theme-wordpress"
+            "link": "https://github.com/gaetanGerard/boucle-la"
           },
           {
-            "title": "Upload du thème via l'interface WordPress",
-            "description": "Accédez à Apparence > Thèmes > Ajouter un nouveau > Téléverser un thème, puis sélectionnez l'archive ZIP du thème."
+            "title": {
+              "name": "Upload du thème via l'interface WordPress",
+              "anchor": "upload-theme",
+              "level": 3
+            },
+            "description": "Accédez à Apparence > Thèmes > Ajouter un nouveau > Téléverser un thème, puis sélectionnez l'archive ZIP du thème.",
+            "image": {
+              "src": "/img/bo_theme/upload-theme.png",
+              "width": 800,
+              "height": 800,
+              "alt": "Screenshot de la fênetre de thème.",
+              "className": "img_config"
+            }
           },
           {
-            "title": "Upload manuel via FTP",
-            "description": "Décompressez le thème et transférez le dossier dans `wp-content/themes/` via votre client FTP (ex : FileZilla).",
+            "title": {
+              "name": "Upload manuel via FTP",
+              "anchor": "manual-upload",
+              "level": 3
+            },
+            "description": "Décompressez le thème et transférez le dossier dans `wp-content/themes/` via votre client FTP (ex : FileZilla), ou placer le dossier bo_theme dans votre dossier theme de WordPress.",
             "tips": [
               {
-                "title": "Tip : Droits des dossiers",
+                "title": {
+                  "name": "Tip : Droits des dossiers",
+                  "anchor": "tip-folder-permissions",
+                  "level": 4
+                },
                 "description": "Si vous rencontrez des erreurs, vérifiez que vos permissions de dossiers sont correctes (généralement 755 pour les dossiers et 644 pour les fichiers).",
-                "documentationLink": "https://wordpress.org/support/article/changing-file-permissions/"
+                "link": {
+                  "link": "https://wordpress.org/support/article/changing-file-permissions/",
+                  "label": "Documentation de WordPress"
+                },
+                "className": "info"
               }
             ]
           },
           {
-            "title": "Compatibilité avec votre système d'exploitation",
-            "description": "L'installation est similaire sur Windows, macOS et Linux. Assurez-vous simplement que les chemins d'accès ne posent pas de problème lors du transfert FTP."
-          },
-          {
-            "title": "Activation du thème",
+            "title": {
+              "name": "Activation du thème",
+              "anchor": "theme-activation",
+              "level": 3
+            },
             "description": "Une fois installé, activez le thème via Apparence > Thèmes > Activer."
           }
         ]
@@ -477,19 +504,34 @@
         "description": "Après activation du thème, suivez ces étapes pour une configuration optimale.",
         "steps": [
           {
-            "title": "Installer et configurer les plugins nécessaires",
-            "description": "Installez WooCommerce, Stripe et les plugins recommandés. Utilisez les assistants de configuration quand disponibles.",
+            "title": {
+              "name": "Installer et configurer Woocommerce",
+              "anchor": "woocommerce-config",
+              "level": 3
+            },
+            "description": "Installer le plugin Woocommerce, se fait très facilement il s'accompagne d'un assistant de configuration qui remplis tout les besoins nécessaires au thème (TVA, Livraison, produits, etc).",
             "tips": [
               {
-                "title": "Tip : Configuration rapide WooCommerce",
-                "description": "Utilisez l'assistant de configuration WooCommerce pour créer vos pages principales (boutique, panier, commande, mon compte).",
-                "documentationLink": "https://woocommerce.com/document/configuring-woocommerce-settings/"
+                "title": {
+                  "name": "Tip : Configuration rapide WooCommerce",
+                  "anchor": "tip-woocommerce-setup",
+                  "level": 4
+                },
+                "link": {
+                  "link": "https://woocommerce.com/document/configuring-woocommerce-settings/",
+                  "label": "Documentation de WooCommerce"
+                },
+                "className": "info"
               }
             ]
           },
           {
-            "title": "Configuration spécifique au thème",
-            "description": "Certains réglages sont propres au thème :\n- Choisir le modèle de page d'accueil\n- Configurer le header et le footer\n- Importer les paramètres de personnalisation s'ils sont fournis."
+            "title": {
+              "name": "Installer et configurer Stripe",
+              "anchor": "stripe-config",
+              "level": 3
+            },
+            "description": "Installer le plugin Stripe et activer le maintenant rendez-vous dans l'interface de woocommerce > Réglages > Paiements > Activer Stripe > et sélectionner vos méthodes de paiements, et voilà Stripe est configurer."
           }
         ]
       },
@@ -499,23 +541,143 @@
           "slug": "installation-menus-pages-widgets"
         },
         "title": {
-          "name": "Configuration des Menus, Pages et Widgets",
+          "name": "Configuration des Menus, Customiseur et Widgets",
           "anchor": "installation-menus-pages-widgets",
           "level": 2
         },
-        "description": "Après l'activation du thème, suivez ces étapes de configuration :\n\n**Menus** :\n- Rendez-vous dans Apparence > Menus.\n- Créez votre menu principal et assignez-le à l'emplacement prévu par le thème (`header_menu` ou similaire).\n\n**Pages** :\n- Créez les pages de base : Accueil, Boutique, Panier, Commande, Mon Compte.\n- Associez la page d'accueil dans Réglages > Lecture > Afficher une page statique.\n- Pour WooCommerce, attribuez correctement les pages via WooCommerce > Réglages > Avancé.\n\n**Widgets** :\n- Rendez-vous dans Apparence > Widgets.\n- Ajoutez les widgets nécessaires dans les zones prévues : Sidebar, Footer, etc.\n\n**Tips** :\n- Le thème peut proposer des emplacements de widgets spécifiques, adaptés à WooCommerce.\n- Pensez à utiliser des extensions comme \"Widget Importer & Exporter\" pour sauvegarder votre configuration si besoin."
-      },
-      {
-        "navItem": {
-          "label": "Plugins Configuration",
-          "slug": "installation-plugin-configuration"
-        },
-        "title": {
-          "name": "Configuration Initiale des Plugins",
-          "anchor": "installation-plugin-configuration",
-          "level": 2
-        },
-        "description": "Après avoir installé les plugins recommandés :\n\n- **WooCommerce** : Suivez l'assistant d'installation, configurez les paiements, les livraisons et la boutique.\n- **Stripe** : Configurez les clés API pour activer les paiements par carte bancaire.\n- **Newsletter, Forminator, Social Login** : Reportez-vous à la documentation officielle de chaque plugin.\n\n**Tips** :\n- Respectez les versions minimum indiquées.\n- Testez les formulaires et processus d'achat pour valider le bon fonctionnement."
+        "description": "Après l'activation du thème, suivez ces étapes de configuration pour configruer le footer, le menu de navigation, mettres vos couleurs et votre logo, configurer une carte cadeau.",
+        "steps": [
+          {
+            "title": {
+              "name": "Ajouter un menu",
+              "anchor": "menus-config",
+              "level": 3
+            },
+            "description": "Dans le thème Boucle-la le menu est diviser en 3 partie le menu gauche et le menu droite se place dans la barre de navigation tandis que le menu footer lui se placera dans le footer.",
+            "list": {
+              "list_desc": "Pour ajouter un menu :",
+              "items": [
+                "Rendez-vous dans Apparence > Menus.",
+                "Créez un nouveau menu et ajoutez les pages souhaitées.",
+                "Assignez-le à l'emplacement `left_menu`, `right_menu` pour la navbar parincipal ou `footer_menu` pour le footer."
+              ]
+            }
+          },
+          {
+            "title": {
+              "name": "Ajouter une page",
+              "anchor": "page-config",
+              "level": 3
+            },
+            "description": "Dans le thème Boucle-la le menu est diviser en 3 partie le menu gauche et le menu droite se place dans la barre de navigation tandis que le menu footer lui se placera dans le footer.",
+            "list": {
+              "list_desc": "Pour ajouter une page :",
+              "items": [
+                "Rendez-vous dans Pages > Ajouter.",
+                "Créez une nouvelle page et ajoutez-y le contenu souhaité.",
+                "Assurez-vous de publier la page."
+              ]
+            },
+            "tips": [
+              {
+                "title": {
+                  "name": "Tip : Utiliser le Style de Bo_theme",
+                  "anchor": "tip-composition-block-used",
+                  "level": 4
+                },
+                "description": "Pour utiliser les styles de Bo_theme, ajoutez les composition bo_theme.",
+                "link": {
+                  "link": "/documentation/blocks-and-compositions/user-features",
+                  "label": "Voire la Documentation"
+                },
+                "className": "message"
+              }
+            ]
+          },
+          {
+            "title": {
+              "name": "Ajouter un Widget footer",
+              "anchor": "footer-config",
+              "level": 3
+            },
+            "description": "Maintenant que vous avez créer un menu vous pouvez créer un Widget pour le footer.",
+            "list": {
+              "list_desc": "Pour ajouter un footer :",
+              "items": [
+                "Rendez-vous dans Apparence > Widgets.",
+                "Ajoutez un widget de type `Menu` dans la zone de widget `footer_menu`.",
+                "Sélectionnez le menu que vous avez créé précédemment."
+              ]
+            }
+          },
+          {
+            "title": {
+              "name": "Ajouter une Carte Cadeau",
+              "anchor": "gift-card-config",
+              "level": 3
+            },
+            "description": "Votre boutique est configurer et vous avez ajouter vos produits et vous voulez ajouter une carte cadeau ? rien de plus simple suivez les étapes ci-dessous.",
+            "list": {
+              "list_desc": "Pour ajouter une carte cadeau :",
+              "items": [
+                "Rendez-vous dans Produits > Ajouter.",
+                "Créez un nouveau produit et ajouter le contenu que vous voulez.",
+                "Choisisser une date de validité en mois.",
+                "Enfin l'étape la plus importante sélectioner le type de produit 'Carte Cadeau'.",
+                "Publiez le produit."
+              ]
+            }
+          },
+          {
+            "title": {
+              "name": "Choisissez vos couleurs",
+              "anchor": "pick-color-config",
+              "level": 3
+            },
+            "description": "avec bo_theme vous pouvez sélectionner les couleurs pour vos liens, vos texte, le fond de votre header et votre footer, la couleur de vos boutons.",
+            "list": {
+              "list_desc": "Pour ajouter/modifier des couleurs :",
+              "items": [
+                "Rendez-vous sur votre site en étant connecté",
+                "Cliquez sur le bouton `Personnaliser` en haut à gauche.",
+                "Sélectionnez `Couleurs` dans le menu de gauche.",
+                "Modifiez les couleurs selon vos préférences."
+              ]
+            }
+          },
+          {
+            "title": {
+              "name": "Choisissez votre logo",
+              "anchor": "pick-logo-config",
+              "level": 3
+            },
+            "description": "avec bo_theme vous pouvez sélectionner un logo qui sera utiliser partout ou vous en avez besoins comme le header et le footer.",
+            "list": {
+              "list_desc": "Pour ajouter/modifier des couleurs :",
+              "items": [
+                "Rendez-vous sur votre site en étant connecté",
+                "Cliquez sur le bouton `Personnaliser` en haut à gauche.",
+                "Sélectionnez `Identité du site` dans le menu de gauche.",
+                "Modifiez les couleurs selon vos préférences."
+              ]
+            },
+            "tips": [
+              {
+                "title": {
+                  "name": "Tip : c'est le moment de choisir un titre et plus encore",
+                  "anchor": "tip-more-customisation",
+                  "level": 4
+                },
+                "description": "Dans le customiseur vous pouvez faire encore plus que simplement choisir vos couleurs et votre logo, vous pouvez également choisir un titre, modifier l'icone visible dans le navigateur et plus encore .",
+                "link": {
+                  "label": "Voire la Roadmap",
+                  "link": "/documentation/maintenance/roadmap"
+                },
+                "className": "message"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

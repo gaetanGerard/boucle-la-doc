@@ -16,46 +16,21 @@
 }
 
 .error {
-  background-color: $error_chip;
-  color: $light_color;
-  transition: background 0.3s;
-  &:hover {
-    background-color: $error_chip_hover;
-  }
+  @include error;
 }
 
 .success {
-  background-color: $success_chip;
-  color: $light_color;
-  transition: background 0.3s;
-  &:hover {
-    background-color: $success_chip_hover;
-  }
+  @include success;
 }
 
 .warning {
-  background-color: $warning_chip;
-  color: $light_color;
-  transition: background 0.3s;
-  &:hover {
-    background-color: $warning_chip_hover;
-  }
+  @include warning;
 }
 
 .info {
-  background-color: $info_chip;
-  color: $light_color;
-  transition: background 0.3s;
-  &:hover {
-    background-color: $info_chip_hover;
-  }
+  @include info;
 }
 
 .message {
-  background-color: $chip_background_color;
-  color: $dark_color;
-  transition: background 0.3s;
-  &:hover {
-    background-color: $chip_bg_color_hover;
-  }
+  @include message;
 }
